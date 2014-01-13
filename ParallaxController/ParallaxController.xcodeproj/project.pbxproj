@@ -29,6 +29,10 @@
 		BEA203311877AA400039B2F7 /* amazing-gerbera-flower-wallpaper-wide-full-hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEA203301877AA400039B2F7 /* amazing-gerbera-flower-wallpaper-wide-full-hd.jpg */; };
 		BEA203341877AB6C0039B2F7 /* MSTImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA203331877AB6C0039B2F7 /* MSTImageViewController.m */; };
 		BEA203371877AC5A0039B2F7 /* MSTParallaxController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA203361877AC5A0039B2F7 /* MSTParallaxController.m */; };
+		EACE189A18847BDE006480A6 /* MSTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE189918847BDE006480A6 /* MSTMainViewController.m */; };
+		EACE189D18847F41006480A6 /* MSTFirstMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE189C18847F41006480A6 /* MSTFirstMenuViewController.m */; };
+		EACE18A018847F67006480A6 /* MSTSecondMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE189F18847F67006480A6 /* MSTSecondMenuViewController.m */; };
+		EACE18A318847F8F006480A6 /* MSTThirdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,14 @@
 		BEA203331877AB6C0039B2F7 /* MSTImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTImageViewController.m; sourceTree = "<group>"; };
 		BEA203351877AC5A0039B2F7 /* MSTParallaxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTParallaxController.h; sourceTree = "<group>"; };
 		BEA203361877AC5A0039B2F7 /* MSTParallaxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTParallaxController.m; sourceTree = "<group>"; };
+		EACE189818847BDE006480A6 /* MSTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTMainViewController.h; path = ParallaxController/MenuPOC/MSTMainViewController.h; sourceTree = "<group>"; };
+		EACE189918847BDE006480A6 /* MSTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTMainViewController.m; path = ParallaxController/MenuPOC/MSTMainViewController.m; sourceTree = "<group>"; };
+		EACE189B18847F41006480A6 /* MSTFirstMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTFirstMenuViewController.h; path = ParallaxController/MenuPOC/MSTFirstMenuViewController.h; sourceTree = "<group>"; };
+		EACE189C18847F41006480A6 /* MSTFirstMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTFirstMenuViewController.m; path = ParallaxController/MenuPOC/MSTFirstMenuViewController.m; sourceTree = "<group>"; };
+		EACE189E18847F67006480A6 /* MSTSecondMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTSecondMenuViewController.h; path = ParallaxController/MenuPOC/MSTSecondMenuViewController.h; sourceTree = "<group>"; };
+		EACE189F18847F67006480A6 /* MSTSecondMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTSecondMenuViewController.m; path = ParallaxController/MenuPOC/MSTSecondMenuViewController.m; sourceTree = "<group>"; };
+		EACE18A118847F8F006480A6 /* MSTThirdMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTThirdMenuViewController.h; path = ParallaxController/MenuPOC/MSTThirdMenuViewController.h; sourceTree = "<group>"; };
+		EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTThirdMenuViewController.m; path = ParallaxController/MenuPOC/MSTThirdMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +117,7 @@
 		BEA202E91877A71D0039B2F7 = {
 			isa = PBXGroup;
 			children = (
+				EACE189718847AFF006480A6 /* MenuPOC */,
 				BEA202FB1877A71D0039B2F7 /* ParallaxController */,
 				BEA2031A1877A71D0039B2F7 /* ParallaxControllerTests */,
 				BEA202F41877A71D0039B2F7 /* Frameworks */,
@@ -188,6 +201,21 @@
 				BEA2031D1877A71D0039B2F7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EACE189718847AFF006480A6 /* MenuPOC */ = {
+			isa = PBXGroup;
+			children = (
+				EACE189818847BDE006480A6 /* MSTMainViewController.h */,
+				EACE189918847BDE006480A6 /* MSTMainViewController.m */,
+				EACE189B18847F41006480A6 /* MSTFirstMenuViewController.h */,
+				EACE189C18847F41006480A6 /* MSTFirstMenuViewController.m */,
+				EACE189E18847F67006480A6 /* MSTSecondMenuViewController.h */,
+				EACE189F18847F67006480A6 /* MSTSecondMenuViewController.m */,
+				EACE18A118847F8F006480A6 /* MSTThirdMenuViewController.h */,
+				EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */,
+			);
+			name = MenuPOC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,14 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACE189A18847BDE006480A6 /* MSTMainViewController.m in Sources */,
 				BEA203021877A71D0039B2F7 /* main.m in Sources */,
+				EACE18A318847F8F006480A6 /* MSTThirdMenuViewController.m in Sources */,
 				BE8DAD631883587400CCF2DB /* MSTSlideUpMenuViewController.m in Sources */,
 				BE8FAD74188373A900EC5F84 /* MSTUIViewClickPassthrough.m in Sources */,
 				BE8DAD6618835B2600CCF2DB /* MSTMenuViewController.m in Sources */,
 				BEA203061877A71D0039B2F7 /* MSTAppDelegate.m in Sources */,
 				BEA2032F1877A8970039B2F7 /* MSTTableViewController.m in Sources */,
+				EACE189D18847F41006480A6 /* MSTFirstMenuViewController.m in Sources */,
 				BE8FAD7A1883778600EC5F84 /* UIImage+ImageEffects.m in Sources */,
 				BEA203371877AC5A0039B2F7 /* MSTParallaxController.m in Sources */,
+				EACE18A018847F67006480A6 /* MSTSecondMenuViewController.m in Sources */,
 				BEA2030C1877A71D0039B2F7 /* MSTViewController.m in Sources */,
 				BEA203341877AB6C0039B2F7 /* MSTImageViewController.m in Sources */,
 			);
