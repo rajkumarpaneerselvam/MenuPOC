@@ -8,6 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MSTSecondMenuViewController : UIViewController
+@interface MSTSecondMenuViewController : UIViewController <UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource> {
+    
+}
+
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (strong, nonatomic) NSMutableArray *menuArray;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapGuesture;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapAction;
+@property (weak, nonatomic) IBOutlet UITableView *menuTableView;
+@property (assign) BOOL isMenuOpen;
+@property (weak, nonatomic) IBOutlet UIView *bgOverlayView;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *overlayTapGuesture;
+
+
+
+- (IBAction)tapAction:(id)sender;
+- (void)startReorderAction:(NSIndexPath *)indexPath;
+- (IBAction)menuDismissAction:(id)sender;
+- (IBAction)onClickBackbutton:(id)sender;
 
 @end
