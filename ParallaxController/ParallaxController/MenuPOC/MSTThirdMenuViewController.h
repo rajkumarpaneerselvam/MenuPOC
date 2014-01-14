@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AwesomeMenu.h"
 
-@interface MSTThirdMenuViewController : UIViewController
+@interface MSTThirdMenuViewController : UIViewController <AwesomeMenuDelegate,AwesomeMenuItemDelegate>{
+    int numberofMenuItems;
+    UILabel *selectedMenuItem;
+}
 
 @end
