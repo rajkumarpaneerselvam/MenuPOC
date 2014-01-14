@@ -78,6 +78,9 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
         _startButton.delegate = self;
         _startButton.center = self.startPoint;
         [self addSubview:_startButton];
+        
+        
+//        [self drawArrowWithContext:UIGraphicsGetCurrentContext() atPoint:CGPointMake(0,0) withSize:CGSizeMake(10, 40) lineWidth:10 arrowHeight:40];
     }
     return self;
 }
@@ -153,6 +156,12 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     self.expanding = !self.isExpanding;
 }
 
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+}
+
+
+
 #pragma mark - AwesomeMenuItem delegates
 - (void)AwesomeMenuItemTouchesBegan:(AwesomeMenuItem *)item
 {
@@ -161,8 +170,16 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
         self.expanding = !self.isExpanding;
     }
 }
+
+- (void)AwesomeMenuItemTouchesMoved:(AwesomeMenuItem *)item{
+    
+}
+
 - (void)AwesomeMenuItemTouchesEnd:(AwesomeMenuItem *)item
 {
+    
+    NSLog(@"Menu selected %@",item.index);
+    
     // exclude the "add" button
     if (item == _startButton) 
     {
@@ -193,9 +210,9 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
         _startButton.transform = CGAffineTransformMakeRotation(angle);
     }];
     
-    if ([_delegate respondsToSelector:@selector(awesomeMenu:didSelectIndex:)])
+    if ([_delegate respondsToSelector:@selector(awesomeMenu:selectedItem:didSelectIndex:)])
     {
-        [_delegate awesomeMenu:self didSelectIndex:item.tag - 1000];
+        [_delegate awesomeMenu:self selectedItem:item didSelectIndex:item.tag - 1000];
     }
 }
 
@@ -243,6 +260,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 		[self insertSubview:item belowSubview:_startButton];
     }
 }
+
 
 - (BOOL)isExpanding
 {
@@ -354,7 +372,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     CGPathRelease(path);
     
     CAAnimationGroup *animationgroup = [CAAnimationGroup animation];
-    animationgroup.animations = [NSArray arrayWithObjects:positionAnimation, rotateAnimation, nil];
+    animationgroup.animations = [NSArray arrayWithObjects:positionAnimation, nil];
     animationgroup.duration = animationDuration;
     animationgroup.fillMode = kCAFillModeForwards;
     animationgroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
@@ -413,11 +431,38 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     opacityAnimation.toValue  = [NSNumber numberWithFloat:0.0f];
     
     CAAnimationGroup *animationgroup = [CAAnimationGroup animation];
-    animationgroup.animations = [NSArray arrayWithObjects:positionAnimation, scaleAnimation, opacityAnimation, nil];
+    animationgroup.animations = [NSArray arrayWithObjects:positionAnimation, opacityAnimation, nil];
     animationgroup.duration = animationDuration;
     animationgroup.fillMode = kCAFillModeForwards;
     
     return animationgroup;
+}
+
+# pragma mark Arrow draw method
+
+- (void) drawArrowWithContext:(CGContextRef)context atPoint:(CGPoint)start_Point withSize:(CGSize)size lineWidth:(float)width arrowHeight:(float)aheight
+{
+    
+    float width_wing = (size.width-width)/2;
+    float main = size.height-aheight;
+    CGPoint rectangle_points[] =
+    {
+        CGPointMake(start_Point.x + width_wing, start_Point.y + 0.0),
+        CGPointMake(start_Point.x + width_wing, start_Point.y + main),
+        CGPointMake(start_Point.x + 0.0, start_Point.y + main), // left point
+        CGPointMake(start_Point.x + size.width/2, start_Point.y + size.height),
+        
+        CGPointMake(start_Point.x + size.width, start_Point.y + main), // right point
+        
+        CGPointMake(start_Point.x + size.width-width_wing, start_Point.y + main),
+        
+        CGPointMake(start_Point.x + size.width-width_wing, start_Point.y + 0.0),
+        CGPointMake(start_Point.x + width_wing, start_Point.y + 0.0),
+    };
+    
+    CGContextAddLines(context, rectangle_points, 8);
+    
+    CGContextFillPath(context);
 }
 
 

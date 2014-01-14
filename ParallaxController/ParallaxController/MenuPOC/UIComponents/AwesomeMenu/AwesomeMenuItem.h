@@ -22,6 +22,7 @@
 }
 
 @property (nonatomic, strong, readonly) UIImageView *contentImageView;
+@property (nonatomic, strong) NSNumber *index;
 
 @property (nonatomic) CGPoint startPoint;
 @property (nonatomic) CGPoint endPoint;
@@ -41,4 +42,5 @@ highlightedContentImage:(UIImage *)hcimg;
 @protocol AwesomeMenuItemDelegate <NSObject>
 - (void)AwesomeMenuItemTouchesBegan:(AwesomeMenuItem *)item;
 - (void)AwesomeMenuItemTouchesEnd:(AwesomeMenuItem *)item;
+- (void)AwesomeMenuItemTouchesMoved:(AwesomeMenuItem *)item;
 @end
