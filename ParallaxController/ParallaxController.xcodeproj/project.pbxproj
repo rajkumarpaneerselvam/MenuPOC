@@ -33,6 +33,8 @@
 		EACE189D18847F41006480A6 /* MSTFirstMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE189C18847F41006480A6 /* MSTFirstMenuViewController.m */; };
 		EACE18A018847F67006480A6 /* MSTSecondMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE189F18847F67006480A6 /* MSTSecondMenuViewController.m */; };
 		EACE18A318847F8F006480A6 /* MSTThirdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */; };
+		EACE18AB188586D2006480A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACE18AA188586D2006480A6 /* QuartzCore.framework */; };
+		EACE18AE1885892C006480A6 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE18AD1885892C006480A6 /* UIView+Genie.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,9 @@
 		EACE189F18847F67006480A6 /* MSTSecondMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTSecondMenuViewController.m; path = ParallaxController/MenuPOC/MSTSecondMenuViewController.m; sourceTree = "<group>"; };
 		EACE18A118847F8F006480A6 /* MSTThirdMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTThirdMenuViewController.h; path = ParallaxController/MenuPOC/MSTThirdMenuViewController.h; sourceTree = "<group>"; };
 		EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTThirdMenuViewController.m; path = ParallaxController/MenuPOC/MSTThirdMenuViewController.m; sourceTree = "<group>"; };
+		EACE18AA188586D2006480A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EACE18AC1885892C006480A6 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Genie.h"; path = "ParallaxController/MenuPOC/UIView+Genie.h"; sourceTree = "<group>"; };
+		EACE18AD1885892C006480A6 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Genie.m"; path = "ParallaxController/MenuPOC/UIView+Genie.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACE18AB188586D2006480A6 /* QuartzCore.framework in Frameworks */,
 				BEA202F81877A71D0039B2F7 /* CoreGraphics.framework in Frameworks */,
 				BEA202FA1877A71D0039B2F7 /* UIKit.framework in Frameworks */,
 				BEA202F61877A71D0039B2F7 /* Foundation.framework in Frameworks */,
@@ -137,6 +143,7 @@
 		BEA202F41877A71D0039B2F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EACE18AA188586D2006480A6 /* QuartzCore.framework */,
 				BEA202F51877A71D0039B2F7 /* Foundation.framework */,
 				BEA202F71877A71D0039B2F7 /* CoreGraphics.framework */,
 				BEA202F91877A71D0039B2F7 /* UIKit.framework */,
@@ -206,6 +213,8 @@
 		EACE189718847AFF006480A6 /* MenuPOC */ = {
 			isa = PBXGroup;
 			children = (
+				EACE18AC1885892C006480A6 /* UIView+Genie.h */,
+				EACE18AD1885892C006480A6 /* UIView+Genie.m */,
 				EACE189818847BDE006480A6 /* MSTMainViewController.h */,
 				EACE189918847BDE006480A6 /* MSTMainViewController.m */,
 				EACE189B18847F41006480A6 /* MSTFirstMenuViewController.h */,
@@ -320,6 +329,7 @@
 				EACE189A18847BDE006480A6 /* MSTMainViewController.m in Sources */,
 				BEA203021877A71D0039B2F7 /* main.m in Sources */,
 				EACE18A318847F8F006480A6 /* MSTThirdMenuViewController.m in Sources */,
+				EACE18AE1885892C006480A6 /* UIView+Genie.m in Sources */,
 				BE8DAD631883587400CCF2DB /* MSTSlideUpMenuViewController.m in Sources */,
 				BE8FAD74188373A900EC5F84 /* MSTUIViewClickPassthrough.m in Sources */,
 				BE8DAD6618835B2600CCF2DB /* MSTMenuViewController.m in Sources */,

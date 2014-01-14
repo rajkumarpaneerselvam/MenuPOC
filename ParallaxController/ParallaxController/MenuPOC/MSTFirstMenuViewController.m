@@ -7,12 +7,16 @@
 //
 
 #import "MSTFirstMenuViewController.h"
+#import <QuartzCore/QuartzCore.h>
+#import "UIView+Genie.h"
+
 
 @interface MSTFirstMenuViewController ()
 
 @end
 
 @implementation MSTFirstMenuViewController
+@synthesize menuView,button;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +31,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [menuView setBackgroundColor:[UIColor grayColor]];
+    [menuView setHidden:YES];
+    [menuView.layer setCornerRadius:8.0f];
+//    [menuView setFrame: CGRectMake(10, 300,300, 150)];
 }
 - (IBAction)onClickBackbutton:(id)sender {
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -37,6 +45,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)onClickMenuButton:(id)sender {
+    
+    [menuView setHidden:NO]
+    ;
+    CGRect startRect = self.button.frame;//CGRectMake(30, 40, 50, 60);
+    [menuView genieOutTransitionWithDuration:0.7
+                               startRect:startRect
+                               startEdge:BCRectEdgeTop
+                              completion:nil];
+    
+    
 }
 
 @end

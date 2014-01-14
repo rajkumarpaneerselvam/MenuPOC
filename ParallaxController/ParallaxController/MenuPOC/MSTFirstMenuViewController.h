@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MSTFirstMenuViewController : UIViewController
+@interface MSTFirstMenuViewController : UIViewController {
+    
+}
+
+@property (nonatomic,retain) IBOutlet UIView *menuView;
+@property (nonatomic,retain) IBOutlet UIButton *button;
+@property (nonatomic) BOOL viewIsIn;
+
 
 @end
