@@ -33,6 +33,8 @@
 		EACE189D18847F41006480A6 /* MSTFirstMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE189C18847F41006480A6 /* MSTFirstMenuViewController.m */; };
 		EACE18A018847F67006480A6 /* MSTSecondMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE189F18847F67006480A6 /* MSTSecondMenuViewController.m */; };
 		EACE18A318847F8F006480A6 /* MSTThirdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */; };
+		EECF7C421884CB9B004770CD /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */; };
+		EECF7C431884CB9B004770CD /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF7C411884CB9B004770CD /* AwesomeMenuItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,10 @@
 		EACE189F18847F67006480A6 /* MSTSecondMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTSecondMenuViewController.m; path = ParallaxController/MenuPOC/MSTSecondMenuViewController.m; sourceTree = "<group>"; };
 		EACE18A118847F8F006480A6 /* MSTThirdMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTThirdMenuViewController.h; path = ParallaxController/MenuPOC/MSTThirdMenuViewController.h; sourceTree = "<group>"; };
 		EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTThirdMenuViewController.m; path = ParallaxController/MenuPOC/MSTThirdMenuViewController.m; sourceTree = "<group>"; };
+		EECF7C3E1884CB9B004770CD /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
+		EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
+		EECF7C401884CB9B004770CD /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
+		EECF7C411884CB9B004770CD /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,7 @@
 		EACE189718847AFF006480A6 /* MenuPOC */ = {
 			isa = PBXGroup;
 			children = (
+				EECF7C3C1884CB9B004770CD /* UIComponents */,
 				EACE189818847BDE006480A6 /* MSTMainViewController.h */,
 				EACE189918847BDE006480A6 /* MSTMainViewController.m */,
 				EACE189B18847F41006480A6 /* MSTFirstMenuViewController.h */,
@@ -216,6 +223,26 @@
 				EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */,
 			);
 			name = MenuPOC;
+			sourceTree = "<group>";
+		};
+		EECF7C3C1884CB9B004770CD /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EECF7C3D1884CB9B004770CD /* AwesomeMenu */,
+			);
+			name = UIComponents;
+			path = ParallaxController/MenuPOC/UIComponents;
+			sourceTree = "<group>";
+		};
+		EECF7C3D1884CB9B004770CD /* AwesomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EECF7C3E1884CB9B004770CD /* AwesomeMenu.h */,
+				EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */,
+				EECF7C401884CB9B004770CD /* AwesomeMenuItem.h */,
+				EECF7C411884CB9B004770CD /* AwesomeMenuItem.m */,
+			);
+			path = AwesomeMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EACE189A18847BDE006480A6 /* MSTMainViewController.m in Sources */,
+				EECF7C431884CB9B004770CD /* AwesomeMenuItem.m in Sources */,
 				BEA203021877A71D0039B2F7 /* main.m in Sources */,
 				EACE18A318847F8F006480A6 /* MSTThirdMenuViewController.m in Sources */,
 				BE8DAD631883587400CCF2DB /* MSTSlideUpMenuViewController.m in Sources */,
@@ -329,6 +357,7 @@
 				BE8FAD7A1883778600EC5F84 /* UIImage+ImageEffects.m in Sources */,
 				BEA203371877AC5A0039B2F7 /* MSTParallaxController.m in Sources */,
 				EACE18A018847F67006480A6 /* MSTSecondMenuViewController.m in Sources */,
+				EECF7C421884CB9B004770CD /* AwesomeMenu.m in Sources */,
 				BEA2030C1877A71D0039B2F7 /* MSTViewController.m in Sources */,
 				BEA203341877AB6C0039B2F7 /* MSTImageViewController.m in Sources */,
 			);
