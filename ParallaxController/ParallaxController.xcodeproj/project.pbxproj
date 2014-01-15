@@ -107,8 +107,8 @@
 		EACE18A118847F8F006480A6 /* MSTThirdMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTThirdMenuViewController.h; path = ParallaxController/MenuPOC/MSTThirdMenuViewController.h; sourceTree = "<group>"; };
 		EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTThirdMenuViewController.m; path = ParallaxController/MenuPOC/MSTThirdMenuViewController.m; sourceTree = "<group>"; };
 		EACE18AA188586D2006480A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		EACE18AC1885892C006480A6 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Genie.h"; path = "ParallaxController/MenuPOC/UIView+Genie.h"; sourceTree = "<group>"; };
-		EACE18AD1885892C006480A6 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Genie.m"; path = "ParallaxController/MenuPOC/UIView+Genie.m"; sourceTree = "<group>"; };
+		EACE18AC1885892C006480A6 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Genie.h"; path = "../UIView+Genie.h"; sourceTree = "<group>"; };
+		EACE18AD1885892C006480A6 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Genie.m"; path = "../UIView+Genie.m"; sourceTree = "<group>"; };
 		EECF7C3E1884CB9B004770CD /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
 		EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
 		EECF7C401884CB9B004770CD /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
@@ -247,9 +247,15 @@
 		EACE189718847AFF006480A6 /* MenuPOC */ = {
 			isa = PBXGroup;
 			children = (
-				EACE18AC1885892C006480A6 /* UIView+Genie.h */,
-				EACE18AD1885892C006480A6 /* UIView+Genie.m */,
+				EE2FEB3D1886E49800433FC9 /* ViewControllers */,
 				EECF7C3C1884CB9B004770CD /* UIComponents */,
+			);
+			name = MenuPOC;
+			sourceTree = "<group>";
+		};
+		EE2FEB3D1886E49800433FC9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				EACE189818847BDE006480A6 /* MSTMainViewController.h */,
 				EACE189918847BDE006480A6 /* MSTMainViewController.m */,
 				EACE189B18847F41006480A6 /* MSTFirstMenuViewController.h */,
@@ -259,12 +265,22 @@
 				EACE18A118847F8F006480A6 /* MSTThirdMenuViewController.h */,
 				EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */,
 			);
-			name = MenuPOC;
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EE2FEB3E1886E4AE00433FC9 /* UIView+Genie */ = {
+			isa = PBXGroup;
+			children = (
+				EACE18AC1885892C006480A6 /* UIView+Genie.h */,
+				EACE18AD1885892C006480A6 /* UIView+Genie.m */,
+			);
+			name = "UIView+Genie";
 			sourceTree = "<group>";
 		};
 		EECF7C3C1884CB9B004770CD /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EE2FEB3E1886E4AE00433FC9 /* UIView+Genie */,
 				EED089661884CF4A000B17CA /* Images */,
 				EECF7C3D1884CB9B004770CD /* AwesomeMenu */,
 			);
@@ -561,6 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParallaxController/ParallaxController-Prefix.pch";
 				INFOPLIST_FILE = "ParallaxController/ParallaxController-Info.plist";
@@ -576,6 +593,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ParallaxController/ParallaxController-Prefix.pch";
 				INFOPLIST_FILE = "ParallaxController/ParallaxController-Info.plist";

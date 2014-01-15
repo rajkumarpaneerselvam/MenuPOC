@@ -28,6 +28,7 @@
 @property (nonatomic) CGPoint endPoint;
 @property (nonatomic) CGPoint nearPoint;
 @property (nonatomic) CGPoint farPoint;
+@property (nonatomic, assign) BOOL menuButton;
 
 @property (nonatomic, weak) id<AwesomeMenuItemDelegate> delegate;
 

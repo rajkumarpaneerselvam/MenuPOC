@@ -178,13 +178,17 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 - (void)AwesomeMenuItemTouchesEnd:(AwesomeMenuItem *)item
 {
     
-    NSLog(@"Menu selected %@",item.index);
+  
     
+        
     // exclude the "add" button
     if (item == _startButton) 
     {
+        self.expanding = NO;
         return;
     }
+    
+   
     // blowup the selected menu button
     CAAnimationGroup *blowup = [self _blowupAnimationAtPoint:item.center];
     [item.layer addAnimation:blowup forKey:@"blowup"];
@@ -203,6 +207,9 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
         otherItem.center = otherItem.startPoint;
     }
     _expanding = NO;
+        
+        NSLog(@"Menu selected %@",item.index);
+
     
     // rotate start button
     float angle = self.isExpanding ? -M_PI_4 : 0.0f;
@@ -214,6 +221,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     {
         [_delegate awesomeMenu:self selectedItem:item didSelectIndex:item.tag - 1000];
     }
+    
 }
 
 #pragma mark - Instant methods

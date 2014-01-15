@@ -18,14 +18,15 @@ static inline CGRect ScaleRect(CGRect rect, float n) {return CGRectMake((rect.si
 @synthesize farPoint = _farPoint;
 @synthesize delegate  = _delegate;
 @synthesize index = _index;
+@synthesize menuButton = _menuButton;
 
 #pragma mark - initialization & cleaning up
-- (id)initWithImage:(UIImage *)img 
+- (id)initWithImage:(UIImage *)img
    highlightedImage:(UIImage *)himg
        ContentImage:(UIImage *)cimg
 highlightedContentImage:(UIImage *)hcimg;
 {
-    if (self = [super init]) 
+    if (self = [super init])
     {
         self.image = img;
         self.highlightedImage = himg;
@@ -34,7 +35,7 @@ highlightedContentImage:(UIImage *)hcimg;
         _contentImageView.highlightedImage = hcimg;
         [self addSubview:_contentImageView];
         
-       
+        
     }
     
     // view did load
@@ -43,7 +44,7 @@ highlightedContentImage:(UIImage *)hcimg;
                                                  name:@"menuSelectionUpdated"
                                                object:nil];
     
-
+    
     
     return self;
 }
@@ -59,11 +60,13 @@ highlightedContentImage:(UIImage *)hcimg;
     float height = _contentImageView.image.size.height;
     _contentImageView.frame = CGRectMake(self.bounds.size.width/2 - width/2, self.bounds.size.height/2 - height/2, width, height);
     
-    UILabel *indexDisplay = [[UILabel alloc] init];
-    indexDisplay.frame = CGRectMake((self.bounds.size.width/2 - width/2)+8, (self.bounds.size.height/2 - height/2)+2, width-2, height-2);
-    indexDisplay.text =[[NSString alloc] initWithFormat:@"%@",_index];
-    [indexDisplay setFont:[UIFont fontWithName:@"Helvetica" size:12]];
-    [self addSubview:indexDisplay];
+    if(_index){
+        UILabel *indexDisplay = [[UILabel alloc] init];
+        indexDisplay.frame = CGRectMake((self.bounds.size.width/2 - width/2)+8, (self.bounds.size.height/2 - height/2)+2, width-2, height-2);
+        indexDisplay.text =[[NSString alloc] initWithFormat:@"%@",_index];
+        [indexDisplay setFont:[UIFont fontWithName:@"Helvetica" size:12]];
+        [self addSubview:indexDisplay];
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -71,7 +74,7 @@ highlightedContentImage:(UIImage *)hcimg;
     self.highlighted = YES;
     if ([_delegate respondsToSelector:@selector(AwesomeMenuItemTouchesBegan:)])
     {
-       [_delegate AwesomeMenuItemTouchesBegan:self];
+        [_delegate AwesomeMenuItemTouchesBegan:self];
     }
     
 }
@@ -79,12 +82,12 @@ highlightedContentImage:(UIImage *)hcimg;
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     // if move out of 2x rect, cancel highlighted.
-//    CGPoint location = [[touches anyObject] locationInView:self];
-//    if (!CGRectContainsPoint(ScaleRect(self.bounds, 2.0f), location))
-//    {
-//        self.highlighted = NO;
-//    }
-//    - (void)AwesomeMenuItemTouchesMoved:(AwesomeMenuItem *)item;
+    //    CGPoint location = [[touches anyObject] locationInView:self];
+    //    if (!CGRectContainsPoint(ScaleRect(self.bounds, 2.0f), location))
+    //    {
+    //        self.highlighted = NO;
+    //    }
+    //    - (void)AwesomeMenuItemTouchesMoved:(AwesomeMenuItem *)item;
     
     
     UITouch *touch = [[event allTouches] anyObject];
@@ -116,6 +119,12 @@ highlightedContentImage:(UIImage *)hcimg;
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:touches, @"CGPoint",nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"menuSelectionUpdated" object:self userInfo:options];
     
+    if (_menuButton) {
+            float width = _contentImageView.image.size.width;
+    float height = _contentImageView.image.size.height;
+    _contentImageView.frame = CGRectMake(self.bounds.size.width/2 - width/2, self.bounds.size.height/2 - height/2, width, height);
+    }
+    
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
@@ -134,22 +143,22 @@ highlightedContentImage:(UIImage *)hcimg;
 #pragma mark Handle local notification
 
 -(void)checkifInsideBounds:(NSNotification *)notification {
-
+    
     if (_index) {
         
-    
-    NSDictionary *receivedData = notification.userInfo;
-    
-    NSSet *touches = [receivedData objectForKey:@"CGPoint"];
-    CGPoint location = [[touches anyObject] locationInView:self];
-    
-    if (CGRectContainsPoint(ScaleRect(self.bounds, 2.0f), location))
-    {
-        if ([_delegate respondsToSelector:@selector(AwesomeMenuItemTouchesEnd:)])
+        
+        NSDictionary *receivedData = notification.userInfo;
+        
+        NSSet *touches = [receivedData objectForKey:@"CGPoint"];
+        CGPoint location = [[touches anyObject] locationInView:self];
+        
+        if (CGRectContainsPoint(ScaleRect(self.bounds, 2.0f), location))
         {
-            [_delegate AwesomeMenuItemTouchesEnd:self];
+            if ([_delegate respondsToSelector:@selector(AwesomeMenuItemTouchesEnd:)])
+            {
+                [_delegate AwesomeMenuItemTouchesEnd:self];
+            }
         }
-    }
     }
 }
 

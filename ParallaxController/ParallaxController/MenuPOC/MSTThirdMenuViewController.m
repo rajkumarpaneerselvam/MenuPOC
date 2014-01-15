@@ -66,7 +66,7 @@
                                                                    ContentImage:starImage
                                                         highlightedContentImage:nil];
         
-        [tempMenuItem setIndex:[[NSNumber alloc] initWithInt:menuIndex]];
+        [tempMenuItem setIndex:[[NSNumber alloc] initWithInt:menuIndex+1]];
         
         [menus addObject:tempMenuItem];
 
@@ -76,6 +76,7 @@
                                                        highlightedImage:[UIImage imageNamed:@"bg-addbutton-highlighted.png"]
                                                            ContentImage:[UIImage imageNamed:@"icon-plus.png"]
                                                 highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
+    [startItem setMenuButton:YES];
     
     AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.view.bounds startItem:startItem optionMenus:menus];
     menu.delegate = self;
@@ -85,7 +86,7 @@
 	menu.endRadius = 100.0f;
 	menu.nearRadius = 90.0f;
     menu.animationDuration = 0.7f;
-    menu.startPoint = CGPointMake(160.0, 410.0);
+    menu.startPoint = CGPointMake(160.0, self.view.frame.size.height-24);
     menu.rotateAngle = 4.8f;
     
     
@@ -116,7 +117,7 @@
 # pragma mark Menu items delegates
 
 - (void)AwesomeMenuItemTouchesBegan:(AwesomeMenuItem *)item{
-    
+   
 }
 
 - (void)AwesomeMenuItemTouchesEnd:(AwesomeMenuItem *)item{
