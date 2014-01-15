@@ -34,6 +34,7 @@
     [menuView setBackgroundColor:[UIColor grayColor]];
     [menuView setHidden:YES];
     [menuView.layer setCornerRadius:8.0f];
+    ismenuOpen = NO;
 //    [menuView setFrame: CGRectMake(10, 300,300, 150)];
 }
 - (IBAction)onClickBackbutton:(id)sender {
@@ -48,13 +49,27 @@
 }
 - (IBAction)onClickMenuButton:(id)sender {
     
-    [menuView setHidden:NO]
-    ;
-    CGRect startRect = self.button.frame;//CGRectMake(30, 40, 50, 60);
-    [menuView genieOutTransitionWithDuration:0.7
-                               startRect:startRect
-                               startEdge:BCRectEdgeTop
-                              completion:nil];
+    if (ismenuOpen) {
+        CGRect endRect = self.button.frame;//CGRectMake(300, 400, 50, 60);
+        [menuView genieInTransitionWithDuration:0.7
+                            destinationRect:endRect
+                            destinationEdge:BCRectEdgeTop
+                                 completion:^{
+                                     NSLog(@"I'm done!");
+                                      [menuView setHidden:YES];
+                                     ismenuOpen = NO;
+                                 }];
+        
+    }else{
+        [menuView setHidden:NO];
+        CGRect startRect = self.button.frame;//CGRectMake(30, 40, 50, 60);
+        [menuView genieOutTransitionWithDuration:0.7
+                                       startRect:startRect
+                                       startEdge:BCRectEdgeTop
+                                      completion:^{
+                                          ismenuOpen = YES;
+                                      }];
+    }
     
     
 }

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MSTFirstMenuViewController : UIViewController {
-    
+    BOOL ismenuOpen;
 }
 
 @property (nonatomic,retain) IBOutlet UIView *menuView;
