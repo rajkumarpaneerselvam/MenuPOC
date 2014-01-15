@@ -743,6 +743,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view alpha="0.099999999999999686" contentMode="scaleToFill" id="yw3-xl-cns">
+                                <rect key="frame" x="-11" y="56" width="331" height="479"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Evp-Kt-T6f" appends="YES" id="iRz-DA-yXf"/>
+                                </connections>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JwW-h7-pkw">
                                 <rect key="frame" x="0.0" y="523" width="320" height="170"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -775,6 +784,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YBA-Re-I9h"/>
                     <connections>
+                        <outlet property="bgOverlayView" destination="yw3-xl-cns" id="OgK-FG-81J"/>
                         <outlet property="lblTitle" destination="b2Q-D8-gC1" id="bUr-gw-MIw"/>
                         <outlet property="menuTableView" destination="JwW-h7-pkw" id="SfU-lw-tfa"/>
                         <outlet property="tapAction" destination="gmI-Zf-SMY" id="lso-ob-T9D"/>
@@ -782,9 +792,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vKy-XG-hZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="gmI-Zf-SMY">
+                <tapGestureRecognizer id="gmI-Zf-SMY" userLabel="menuLblTap">
                     <connections>
                         <action selector="tapAction:" destination="GG2-S9-sMz" id="2aM-AC-zQb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Evp-Kt-T6f">
+                    <connections>
+                        <action selector="menuDismissAction:" destination="GG2-S9-sMz" id="VbU-Wq-OzG"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

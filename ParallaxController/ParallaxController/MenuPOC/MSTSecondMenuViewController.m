@@ -43,6 +43,15 @@
     
     // initial time setup
     [self setIsMenuOpen:NO];
+    [self.bgOverlayView setHidden:YES];
+    // subviews frames
+    CGRect lblFrame = self.lblTitle.frame;
+    CGFloat y = (frame.origin.y + frame.size.height) - lblFrame.size.height;
+    lblFrame.origin.y = y;
+    [self.lblTitle setFrame:lblFrame];
+    // rounded corner label
+    [self.lblTitle.layer setCornerRadius:5.0];
+    
     
     // set tap guesture to UILabel
     self.tapGuesture.numberOfTapsRequired = 1;
@@ -72,9 +81,13 @@
                      animations:^{
                          if (self.isMenuOpen) {
                              self.menuTableView.frame = CGRectMake(0, frame.origin.y + frame.size.height, frame.size.width, MenuTable_Height);
+                             // Hide overlayview
+                             [self.bgOverlayView setHidden:YES];
                              
                          } else {
                              self.menuTableView.frame = CGRectMake(0, (frame.origin.y + frame.size.height) - (frame.origin.y + self.menuTableView.frame.size.height) , frame.size.width, MenuTable_Height);
+                             // Hide overlayview
+                             [self.bgOverlayView setHidden:NO];
                          }
                      }
                      completion:^(BOOL finished){
@@ -177,12 +190,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     // set the titile label text
     [self.lblTitle setText:[self.menuArray objectAtIndex:indexPath.row]];
-    
-    //int selectedRow = indexPath.row;
-    UITableViewCell *indexCell = [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-    NSIndexPath *toIndexPath = [tableView indexPathForCell:indexCell];
-    // NSLog(@"touch on row %d, toindexPath %d,%d", selectedRow, toIndexPath.row, toIndexPath.section);
-    [tableView moveRowAtIndexPath:indexPath toIndexPath:toIndexPath];
+    [tableView moveRowAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     
     // call Re-Order action
     [self startReorderAction:indexPath];
@@ -200,6 +208,8 @@
 }
 
 - (IBAction)menuDismissAction:(id)sender {
+    [self setIsMenuOpen:YES];
+    [self tapAction:sender];
     [self.bgOverlayView setHidden:YES];
 }
 
