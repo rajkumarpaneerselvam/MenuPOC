@@ -12,7 +12,9 @@
 @protocol AwesomeMenuDelegate;
 
 
-@interface AwesomeMenu : UIView <AwesomeMenuItemDelegate>
+@interface AwesomeMenu : UIView <AwesomeMenuItemDelegate>{
+    CGContextRef contextReferance;
+}
 
 @property (nonatomic, copy) NSArray *menusArray;
 @property (nonatomic, getter = isExpanding) BOOL expanding;
