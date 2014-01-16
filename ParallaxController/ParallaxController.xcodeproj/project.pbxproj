@@ -35,6 +35,7 @@
 		EACE18A318847F8F006480A6 /* MSTThirdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */; };
 		EACE18AB188586D2006480A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACE18AA188586D2006480A6 /* QuartzCore.framework */; };
 		EACE18AE1885892C006480A6 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE18AD1885892C006480A6 /* UIView+Genie.m */; };
+		EACE18B11888298E006480A6 /* MSTMyAccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE18B01888298E006480A6 /* MSTMyAccViewController.m */; };
 		EECF7C421884CB9B004770CD /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */; };
 		EECF7C431884CB9B004770CD /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF7C411884CB9B004770CD /* AwesomeMenuItem.m */; };
 		EED089751884CF4A000B17CA /* bg-addbutton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = EED089671884CF4A000B17CA /* bg-addbutton-highlighted.png */; };
@@ -109,6 +110,8 @@
 		EACE18AA188586D2006480A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EACE18AC1885892C006480A6 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Genie.h"; path = "../UIView+Genie.h"; sourceTree = "<group>"; };
 		EACE18AD1885892C006480A6 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Genie.m"; path = "../UIView+Genie.m"; sourceTree = "<group>"; };
+		EACE18AF1888298E006480A6 /* MSTMyAccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTMyAccViewController.h; path = ParallaxController/MenuPOC/MSTMyAccViewController.h; sourceTree = "<group>"; };
+		EACE18B01888298E006480A6 /* MSTMyAccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTMyAccViewController.m; path = ParallaxController/MenuPOC/MSTMyAccViewController.m; sourceTree = "<group>"; };
 		EECF7C3E1884CB9B004770CD /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
 		EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
 		EECF7C401884CB9B004770CD /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 				EACE189F18847F67006480A6 /* MSTSecondMenuViewController.m */,
 				EACE18A118847F8F006480A6 /* MSTThirdMenuViewController.h */,
 				EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */,
+				EACE18AF1888298E006480A6 /* MSTMyAccViewController.h */,
+				EACE18B01888298E006480A6 /* MSTMyAccViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 				EACE189D18847F41006480A6 /* MSTFirstMenuViewController.m in Sources */,
 				BE8FAD7A1883778600EC5F84 /* UIImage+ImageEffects.m in Sources */,
 				BEA203371877AC5A0039B2F7 /* MSTParallaxController.m in Sources */,
+				EACE18B11888298E006480A6 /* MSTMyAccViewController.m in Sources */,
 				EACE18A018847F67006480A6 /* MSTSecondMenuViewController.m in Sources */,
 				EECF7C421884CB9B004770CD /* AwesomeMenu.m in Sources */,
 				BEA2030C1877A71D0039B2F7 /* MSTViewController.m in Sources */,

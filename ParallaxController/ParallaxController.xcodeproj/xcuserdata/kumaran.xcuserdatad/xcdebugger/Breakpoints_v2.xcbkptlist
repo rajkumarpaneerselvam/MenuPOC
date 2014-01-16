@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/UIView+Genie.m"
-            timestampString = "411408733.519955"
+            filePath = "ParallaxController/MenuPOC/MSTFirstMenuViewController.m"
+            timestampString = "411594059.164461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
-            landmarkName = "-genieTransitionWithDuration:edge:destinationRect:reverse:completion:"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-onClickMenuFeatures:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,76 +25,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/UIView+Genie.m"
-            timestampString = "411419828.195358"
+            filePath = "ParallaxController/MenuPOC/MSTMyAccViewController.m"
+            timestampString = "411586919.567747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
-            landmarkName = "-genieTransitionWithDuration:edge:destinationRect:reverse:completion:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/UIView+Genie.m"
-            timestampString = "411419201.914112"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
-            landmarkName = "-genieTransitionWithDuration:edge:destinationRect:reverse:completion:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/UIView+Genie.m"
-            timestampString = "411422319.790547"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "-genieTransitionWithDuration:edge:destinationRect:reverse:completion:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/UIView+Genie.m"
-            timestampString = "411422516.957621"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "-genieTransitionWithDuration:edge:destinationRect:reverse:completion:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/MSTSecondMenuViewController.m"
-            timestampString = "411429161.814369"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
@@ -105,13 +41,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/MSTSecondMenuViewController.m"
-            timestampString = "411429258.566088"
+            filePath = "ParallaxController/MenuPOC/MSTFirstMenuViewController.m"
+            timestampString = "411594059.164461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "-loadDefaultView:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ParallaxController/MenuPOC/MSTFirstMenuViewController.m"
+            timestampString = "411594059.164461"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-onClickMenuButton:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

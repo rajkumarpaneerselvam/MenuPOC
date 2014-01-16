@@ -210,7 +210,7 @@ static const int BCTrapezoidWinding[4][4] = {
 
     NSInteger totalIter = duration*kFPS;
     double tSignShift = reverse ? -1.0 : 1.0;
-    
+
     for (int i = 0; i < totalIter; i++) {
         
         double progress = ((double)i)/((double)totalIter - 1.0);        
@@ -240,32 +240,15 @@ static const int BCTrapezoidWinding[4][4] = {
     
     [CATransaction begin];
     [CATransaction setCompletionBlock:^{
-    
-        
-        
-        NSLog(@"Self frame ----- %f,%f,%f,%f", self.frame.origin.x,self.frame.origin.y,self.frame.size.height,self.frame.size.width);
         [containerView removeFromSuperview];
-
-        
-        
         CGSize startSize = self.frame.size;
         CGSize endSize = destRect.size;
-        
-        NSLog(@"startSize frame ----- %f,%f,%f,%f", startSize.width,startSize.height,endSize.width,endSize.height);
-
-    
         CGPoint startOrigin = self.frame.origin;
         CGPoint endOrigin = destRect.origin;
-
-        NSLog(@"startOrigin frame ----- %f,%f,%f,%f", startOrigin.x,startOrigin.y,endOrigin.x,endOrigin.y);
-
         
         if (! reverse) {
             
-            
             CGAffineTransform transform = CGAffineTransformMakeTranslation(endOrigin.x - startOrigin.x, endOrigin.y - startOrigin.y); // move to destination
-            
-
             transform = CGAffineTransformTranslate(transform, -startSize.width/2.0, -startSize.height/2.0); // move top left corner to origin
             transform = CGAffineTransformScale(transform, endSize.width/startSize.width, endSize.height/startSize.height); // scale
             transform = CGAffineTransformTranslate(transform, startSize.width/2.0, startSize.height/2.0); // move back
