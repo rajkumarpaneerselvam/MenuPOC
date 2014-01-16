@@ -80,10 +80,11 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
         [self addSubview:_startButton];
         
         
-//        [self drawArrowWithContext:UIGraphicsGetCurrentContext() atPoint:CGPointMake(0,0) withSize:CGSizeMake(10, 40) lineWidth:10 arrowHeight:40];
+      
     }
     return self;
 }
+
 
 
 #pragma mark - Getters & Setters
@@ -153,6 +154,7 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+      [self drawArrowWithContext:contextReferance atPoint:CGPointMake(0,0) withSize:CGSizeMake(10, 40) lineWidth:10 arrowHeight:40];
     self.expanding = !self.isExpanding;
 }
 
@@ -314,7 +316,6 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
     
     int tag = 1000 + _flag;
     AwesomeMenuItem *item = (AwesomeMenuItem *)[self viewWithTag:tag];
-    
     CAKeyframeAnimation *rotateAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotateAnimation.values = [NSArray arrayWithObjects:[NSNumber numberWithFloat:expandRotation],[NSNumber numberWithFloat:0.0f], nil];
     rotateAnimation.duration = animationDuration;
@@ -447,6 +448,10 @@ static CGPoint RotateCGPointAroundCenter(CGPoint point, CGPoint center, float an
 }
 
 # pragma mark Arrow draw method
+
+- (void)drawRect:(CGRect)rect{
+    contextReferance = UIGraphicsGetCurrentContext();
+}
 
 - (void) drawArrowWithContext:(CGContextRef)context atPoint:(CGPoint)start_Point withSize:(CGSize)size lineWidth:(float)width arrowHeight:(float)aheight
 {

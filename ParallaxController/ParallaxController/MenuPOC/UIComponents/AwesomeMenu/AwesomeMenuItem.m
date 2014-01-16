@@ -34,8 +34,6 @@ highlightedContentImage:(UIImage *)hcimg;
         _contentImageView = [[UIImageView alloc] initWithImage:cimg];
         _contentImageView.highlightedImage = hcimg;
         [self addSubview:_contentImageView];
-        
-        
     }
     
     // view did load
@@ -61,11 +59,15 @@ highlightedContentImage:(UIImage *)hcimg;
     _contentImageView.frame = CGRectMake(self.bounds.size.width/2 - width/2, self.bounds.size.height/2 - height/2, width, height);
     
     if(_index){
-        UILabel *indexDisplay = [[UILabel alloc] init];
-        indexDisplay.frame = CGRectMake((self.bounds.size.width/2 - width/2)+8, (self.bounds.size.height/2 - height/2)+2, width-2, height-2);
-        indexDisplay.text =[[NSString alloc] initWithFormat:@"%@",_index];
-        [indexDisplay setFont:[UIFont fontWithName:@"Helvetica" size:12]];
-        [self addSubview:indexDisplay];
+//        UILabel *indexDisplay = [[UILabel alloc] init];
+//        indexDisplay.frame = CGRectMake((self.bounds.size.width/2 - width/2)+8, (self.bounds.size.height/2 - height/2)+2, width-2, height-2);
+//        indexDisplay.text =[[NSString alloc] initWithFormat:@"%@",_index];
+//        [indexDisplay setFont:[UIFont fontWithName:@"Helvetica" size:12]];
+//        [self addSubview:indexDisplay];
+        
+          [_contentImageView setHidden:YES];
+    }else{
+      
     }
 }
 

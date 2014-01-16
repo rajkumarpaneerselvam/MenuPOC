@@ -36,6 +36,19 @@
 		EACE18AB188586D2006480A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACE18AA188586D2006480A6 /* QuartzCore.framework */; };
 		EACE18AE1885892C006480A6 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE18AD1885892C006480A6 /* UIView+Genie.m */; };
 		EACE18B11888298E006480A6 /* MSTMyAccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACE18B01888298E006480A6 /* MSTMyAccViewController.m */; };
+		EEC2126C188845DA005FE7B4 /* MSTEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2126B188845DA005FE7B4 /* MSTEmptyView.m */; };
+		EEC212731888517A005FE7B4 /* credit_card.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC2126E1888517A005FE7B4 /* credit_card.png */; };
+		EEC212741888517A005FE7B4 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC2126F1888517A005FE7B4 /* mail.png */; };
+		EEC212751888517A005FE7B4 /* map_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212701888517A005FE7B4 /* map_pin.png */; };
+		EEC212761888517A005FE7B4 /* process.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212711888517A005FE7B4 /* process.png */; };
+		EEC2127C188854A2005FE7B4 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC2127B188854A2005FE7B4 /* barcode.png */; };
+		EEC21282188867A3005FE7B4 /* barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC2127D188867A3005FE7B4 /* barcode@2x.png */; };
+		EEC21283188867A3005FE7B4 /* credit_card@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC2127E188867A3005FE7B4 /* credit_card@2x.png */; };
+		EEC21284188867A3005FE7B4 /* mail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC2127F188867A3005FE7B4 /* mail@2x.png */; };
+		EEC21285188867A3005FE7B4 /* map_pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC21280188867A3005FE7B4 /* map_pin@2x.png */; };
+		EEC21286188867A3005FE7B4 /* process@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC21281188867A3005FE7B4 /* process@2x.png */; };
+		EEC2128818886D3E005FE7B4 /* barcode_big.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC2128718886D3E005FE7B4 /* barcode_big.png */; };
+		EEC2128B18886D78005FE7B4 /* MSTBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC2128A18886D78005FE7B4 /* MSTBarCodeViewController.m */; };
 		EECF7C421884CB9B004770CD /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */; };
 		EECF7C431884CB9B004770CD /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF7C411884CB9B004770CD /* AwesomeMenuItem.m */; };
 		EED089751884CF4A000B17CA /* bg-addbutton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = EED089671884CF4A000B17CA /* bg-addbutton-highlighted.png */; };
@@ -112,6 +125,21 @@
 		EACE18AD1885892C006480A6 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Genie.m"; path = "../UIView+Genie.m"; sourceTree = "<group>"; };
 		EACE18AF1888298E006480A6 /* MSTMyAccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTMyAccViewController.h; path = ParallaxController/MenuPOC/MSTMyAccViewController.h; sourceTree = "<group>"; };
 		EACE18B01888298E006480A6 /* MSTMyAccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTMyAccViewController.m; path = ParallaxController/MenuPOC/MSTMyAccViewController.m; sourceTree = "<group>"; };
+		EEC2126A188845DA005FE7B4 /* MSTEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTEmptyView.h; path = ParallaxController/MenuPOC/UIComponents/MSTEmptyView.h; sourceTree = "<group>"; };
+		EEC2126B188845DA005FE7B4 /* MSTEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTEmptyView.m; path = ParallaxController/MenuPOC/UIComponents/MSTEmptyView.m; sourceTree = "<group>"; };
+		EEC2126E1888517A005FE7B4 /* credit_card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credit_card.png; sourceTree = "<group>"; };
+		EEC2126F1888517A005FE7B4 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
+		EEC212701888517A005FE7B4 /* map_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin.png; sourceTree = "<group>"; };
+		EEC212711888517A005FE7B4 /* process.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = process.png; sourceTree = "<group>"; };
+		EEC2127B188854A2005FE7B4 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
+		EEC2127D188867A3005FE7B4 /* barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barcode@2x.png"; sourceTree = "<group>"; };
+		EEC2127E188867A3005FE7B4 /* credit_card@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "credit_card@2x.png"; sourceTree = "<group>"; };
+		EEC2127F188867A3005FE7B4 /* mail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail@2x.png"; sourceTree = "<group>"; };
+		EEC21280188867A3005FE7B4 /* map_pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pin@2x.png"; sourceTree = "<group>"; };
+		EEC21281188867A3005FE7B4 /* process@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "process@2x.png"; sourceTree = "<group>"; };
+		EEC2128718886D3E005FE7B4 /* barcode_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode_big.png; sourceTree = "<group>"; };
+		EEC2128918886D78005FE7B4 /* MSTBarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTBarCodeViewController.h; path = ParallaxController/MenuPOC/MSTBarCodeViewController.h; sourceTree = "<group>"; };
+		EEC2128A18886D78005FE7B4 /* MSTBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTBarCodeViewController.m; path = ParallaxController/MenuPOC/MSTBarCodeViewController.m; sourceTree = "<group>"; };
 		EECF7C3E1884CB9B004770CD /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
 		EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
 		EECF7C401884CB9B004770CD /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
@@ -269,6 +297,10 @@
 				EACE18A218847F8F006480A6 /* MSTThirdMenuViewController.m */,
 				EACE18AF1888298E006480A6 /* MSTMyAccViewController.h */,
 				EACE18B01888298E006480A6 /* MSTMyAccViewController.m */,
+				EEC2126A188845DA005FE7B4 /* MSTEmptyView.h */,
+				EEC2126B188845DA005FE7B4 /* MSTEmptyView.m */,
+				EEC2128918886D78005FE7B4 /* MSTBarCodeViewController.h */,
+				EEC2128A18886D78005FE7B4 /* MSTBarCodeViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -307,6 +339,17 @@
 		EED089661884CF4A000B17CA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EEC2128718886D3E005FE7B4 /* barcode_big.png */,
+				EEC2127D188867A3005FE7B4 /* barcode@2x.png */,
+				EEC2127E188867A3005FE7B4 /* credit_card@2x.png */,
+				EEC2127F188867A3005FE7B4 /* mail@2x.png */,
+				EEC21280188867A3005FE7B4 /* map_pin@2x.png */,
+				EEC21281188867A3005FE7B4 /* process@2x.png */,
+				EEC2127B188854A2005FE7B4 /* barcode.png */,
+				EEC2126E1888517A005FE7B4 /* credit_card.png */,
+				EEC2126F1888517A005FE7B4 /* mail.png */,
+				EEC212701888517A005FE7B4 /* map_pin.png */,
+				EEC212711888517A005FE7B4 /* process.png */,
 				EED089671884CF4A000B17CA /* bg-addbutton-highlighted.png */,
 				EED089681884CF4A000B17CA /* bg-addbutton-highlighted@2x.png */,
 				EED089691884CF4A000B17CA /* bg-addbutton.png */,
@@ -405,7 +448,10 @@
 			files = (
 				EED089771884CF4A000B17CA /* bg-addbutton.png in Resources */,
 				BEA203311877AA400039B2F7 /* amazing-gerbera-flower-wallpaper-wide-full-hd.jpg in Resources */,
+				EEC21286188867A3005FE7B4 /* process@2x.png in Resources */,
+				EEC212731888517A005FE7B4 /* credit_card.png in Resources */,
 				EED0897B1884CF4A000B17CA /* bg-menuitem.png in Resources */,
+				EEC21285188867A3005FE7B4 /* map_pin@2x.png in Resources */,
 				EED089761884CF4A000B17CA /* bg-addbutton-highlighted@2x.png in Resources */,
 				EED0897F1884CF4A000B17CA /* icon-plus.png in Resources */,
 				EED0897D1884CF4A000B17CA /* icon-plus-highlighted.png in Resources */,
@@ -413,14 +459,22 @@
 				EED089821884CF4A000B17CA /* icon-star@2x.png in Resources */,
 				EED089801884CF4A000B17CA /* icon-plus@2x.png in Resources */,
 				EED0897C1884CF4A000B17CA /* bg-menuitem@2x.png in Resources */,
+				EEC212751888517A005FE7B4 /* map_pin.png in Resources */,
 				BEA2030E1877A71D0039B2F7 /* Images.xcassets in Resources */,
+				EEC21283188867A3005FE7B4 /* credit_card@2x.png in Resources */,
+				EEC212761888517A005FE7B4 /* process.png in Resources */,
 				BEA203001877A71D0039B2F7 /* InfoPlist.strings in Resources */,
+				EEC212741888517A005FE7B4 /* mail.png in Resources */,
+				EEC21284188867A3005FE7B4 /* mail@2x.png in Resources */,
 				EED0897E1884CF4A000B17CA /* icon-plus-highlighted@2x.png in Resources */,
 				EED089811884CF4A000B17CA /* icon-star.png in Resources */,
 				EED089791884CF4A000B17CA /* bg-menuitem-highlighted.png in Resources */,
+				EEC21282188867A3005FE7B4 /* barcode@2x.png in Resources */,
 				EED0897A1884CF4A000B17CA /* bg-menuitem-highlighted@2x.png in Resources */,
+				EEC2127C188854A2005FE7B4 /* barcode.png in Resources */,
 				BEA203091877A71D0039B2F7 /* Main.storyboard in Resources */,
 				EED089751884CF4A000B17CA /* bg-addbutton-highlighted.png in Resources */,
+				EEC2128818886D3E005FE7B4 /* barcode_big.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,8 +498,10 @@
 				BEA203021877A71D0039B2F7 /* main.m in Sources */,
 				EACE18A318847F8F006480A6 /* MSTThirdMenuViewController.m in Sources */,
 				EACE18AE1885892C006480A6 /* UIView+Genie.m in Sources */,
+				EEC2128B18886D78005FE7B4 /* MSTBarCodeViewController.m in Sources */,
 				BE8DAD631883587400CCF2DB /* MSTSlideUpMenuViewController.m in Sources */,
 				BE8FAD74188373A900EC5F84 /* MSTUIViewClickPassthrough.m in Sources */,
+				EEC2126C188845DA005FE7B4 /* MSTEmptyView.m in Sources */,
 				BE8DAD6618835B2600CCF2DB /* MSTMenuViewController.m in Sources */,
 				BEA203061877A71D0039B2F7 /* MSTAppDelegate.m in Sources */,
 				BEA2032F1877A8970039B2F7 /* MSTTableViewController.m in Sources */,

@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AwesomeMenu.h"
+#import "MSTEmptyView.h"
 
 @interface MSTThirdMenuViewController : UIViewController <AwesomeMenuDelegate,AwesomeMenuItemDelegate>{
     int numberofMenuItems;
     UILabel *selectedMenuItem;
+    MSTEmptyView *vw;
 }
 
 @end
