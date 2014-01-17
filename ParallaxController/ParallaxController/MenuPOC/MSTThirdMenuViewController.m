@@ -134,8 +134,8 @@
 
 //    barcode
     
-    MSTBarCodeViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"barcode"];
-    [self presentViewController:NVC animated:YES completion:nil];
+//    MSTBarCodeViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"barcode"];
+//    [self presentViewController:NVC animated:YES completion:nil];
     
     NSLog(@"Stacked View controllers %@",[self.navigationController viewControllers]);
     

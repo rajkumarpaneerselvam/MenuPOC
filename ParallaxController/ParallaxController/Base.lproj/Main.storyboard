@@ -725,12 +725,18 @@
                                     <action selector="onClickMenuButton:" destination="3wW-sI-t09" eventType="touchUpInside" id="r0s-Km-6Wh"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="ApH-Jn-wA6">
+                                <rect key="frame" x="80" y="537" width="150" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="IKH-Tr-WG7"/>
                     <connections>
                         <outlet property="button" destination="GgH-46-fl0" id="DU4-6O-Q2e"/>
+                        <outlet property="dragMenuView" destination="ApH-Jn-wA6" id="VoP-9P-ORb"/>
                         <outlet property="menuView" destination="bDg-XB-SWM" id="4ql-s1-fes"/>
                         <outlet property="myAccButton" destination="qMZ-4S-fP6" id="hkQ-l5-edr"/>
                         <outlet property="myProButton" destination="uYU-uP-Gvf" id="OQY-Jm-PPT"/>
