@@ -1,18 +1,18 @@
 //
-//  MSTCreditCardViewController.m
+//  MSTSecondMenuMapViewController.m
 //  ParallaxController
 //
-//  Created by Rajkumar P on 1/16/14.
+//  Created by BalaBaskaran on 17/01/14.
 //  Copyright (c) 2014 Michael Thornton. All rights reserved.
 //
 
-#import "MSTCreditCardViewController.h"
+#import "MSTSecondMenuMapViewController.h"
 
-@interface MSTCreditCardViewController ()
+@interface MSTSecondMenuMapViewController ()
 
 @end
 
-@implementation MSTCreditCardViewController
+@implementation MSTSecondMenuMapViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,9 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    [self setIndex:[NSNumber numberWithInt:2]];
-    
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,7 +34,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 @end

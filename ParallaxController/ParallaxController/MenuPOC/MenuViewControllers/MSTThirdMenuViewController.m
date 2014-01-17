@@ -152,6 +152,16 @@
 
 - (void)awesomeMenu:(AwesomeMenu *)menu selectedItem:(AwesomeMenuItem *)item didSelectIndex:(NSInteger)idx{
     
+    selectedMenuItem.text = [[NSString alloc] initWithFormat:@"Selected menu : %@",item.index];
+    
+
+//    barcode
+    
+//    MSTBarCodeViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"barcode"];
+//    [self presentViewController:NVC animated:YES completion:nil];
+    
+    NSLog(@"Stacked View controllers %@",[self.navigationController viewControllers]);
+    
 //    selectedMenuItem.text = [[NSString alloc] initWithFormat:@"Selected menu : %@",item.index];
     if(_index){
     if (([item.index isEqualToNumber:[NSNumber numberWithInt:1]]) && (![item.index isEqualToNumber:_index]))
@@ -175,7 +185,6 @@
     }
     
 }
-
 
 
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
