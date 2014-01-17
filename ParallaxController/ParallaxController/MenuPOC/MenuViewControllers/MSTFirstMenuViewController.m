@@ -71,7 +71,7 @@
     
     if (ismenuOpen) {
         CGRect endRect = self.button.frame;
-        [menuView genieInTransitionWithDuration:0.7
+        [menuView genieInTransitionWithDuration:0.25
                             destinationRect:endRect
                             destinationEdge:BCRectEdgeTop
                                  completion:^{
@@ -83,7 +83,7 @@
     }else{
         [menuView setHidden:NO];
         CGRect startRect = self.button.frame;
-        [menuView genieOutTransitionWithDuration:0.7
+        [menuView genieOutTransitionWithDuration:0.25
                                        startRect:startRect
                                        startEdge:BCRectEdgeTop
                                       completion:^{

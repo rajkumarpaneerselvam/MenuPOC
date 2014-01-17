@@ -877,7 +877,7 @@
                                     <action selector="onClickBackbutton:" destination="3wW-sI-t09" eventType="touchUpInside" id="azS-lj-OZg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Menu " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aE9-dm-Xv3">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aE9-dm-Xv3">
                                 <rect key="frame" x="93" y="24" width="129" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -965,13 +965,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gWP-WG-YvX">
-                                <rect key="frame" x="100" y="86" width="103" height="59"/>
+                                <rect key="frame" x="95" y="107" width="116" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="46"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="18C-3k-G5d">
-                                <rect key="frame" x="107" y="132" width="104" height="151"/>
+                                <rect key="frame" x="109" y="153" width="104" height="151"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="139"/>
                                 <nil key="highlightedColor"/>
@@ -2996,89 +2996,16 @@
     </scenes>
     <resources>
         <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
         <image name="barcode.png" width="32" height="32"/>
         <image name="barcode_big.png" width="128" height="128"/>
-        <image name="barcode_big.png" width="128" height="128"/>
         <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card_big.png" width="128" height="128"/>
         <image name="credit_card_big.png" width="128" height="128"/>
         <image name="dashboardbg.png" width="307" height="375"/>
         <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail_big.png" width="128" height="128"/>
         <image name="mail_big.png" width="128" height="128"/>
         <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin_big.png" width="128" height="128"/>
         <image name="map_pin_big.png" width="128" height="128"/>
         <image name="process.png" width="32" height="32"/>
-        <image name="process_big.png" width="128" height="128"/>
         <image name="process_big.png" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
