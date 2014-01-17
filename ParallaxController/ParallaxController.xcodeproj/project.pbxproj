@@ -427,7 +427,7 @@
 				EA03581718899953002EA17A /* MSTFirstMenuMapViewController.m */,
 				EA0358191889997D002EA17A /* MSTFirstMenuSettingsViewController.h */,
 				EA03581A1889997D002EA17A /* MSTFirstMenuSettingsViewController.m */,
-				4DA3F7C81889BE24000AFB02 /* SecondMenuDetails */,
+ 				4DA3F7C81889BE24000AFB02 /* SecondMenuDetails */,
 			);
 			name = MenuItemsViewControllers;
 			path = ParallaxController/MenuPOC/MenuItemsViewControllers;
