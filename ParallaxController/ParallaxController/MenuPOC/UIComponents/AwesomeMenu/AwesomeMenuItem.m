@@ -37,14 +37,21 @@ highlightedContentImage:(UIImage *)hcimg;
     }
     
     // view did load
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(checkifInsideBounds:)
-                                                 name:@"menuSelectionUpdated"
-                                               object:nil];
     
     
     
     return self;
+}
+
+-(void)registerForNotification{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(checkifInsideBounds:)
+                                                 name:@"menuSelectionUpdated"
+                                               object:nil];
+
+}
+-(void)deregisterForNotification{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"menuSelectionUpdated" object:nil];
 }
 
 #pragma mark - UIView's methods

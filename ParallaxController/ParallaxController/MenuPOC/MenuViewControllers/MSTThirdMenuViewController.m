@@ -14,13 +14,17 @@
 
 @end
 
+
 @implementation MSTThirdMenuViewController
+
+@synthesize index = _index;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -30,15 +34,34 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
-    vw = [[MSTEmptyView alloc] initWithFrame:self.view.frame];
-    
-    vw.backgroundColor = [UIColor whiteColor];
-    self.view = vw;
+//    vw = [[MSTEmptyView alloc] initWithFrame:self.view.frame];
+//    
+//    vw.backgroundColor = [UIColor whiteColor];
+//    self.view = vw;
     
     [self setupMenu];
     
+    _index =[NSNumber numberWithInt:0];
 
 
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [startItem registerForNotification];
+    [barcode registerForNotification];
+    [creditcard registerForNotification];
+    [mail registerForNotification];
+    [mappin registerForNotification];
+    [process registerForNotification];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [startItem deregisterForNotification];
+    [barcode deregisterForNotification];
+    [creditcard deregisterForNotification];
+    [mail deregisterForNotification];
+    [mappin deregisterForNotification];
+    [process deregisterForNotification];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,13 +82,13 @@
     
     NSMutableArray *menus = [[NSMutableArray alloc] init];
     
-    AwesomeMenuItem *startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-menuitem.png"]
+    startItem = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"bg-menuitem.png"]
                                                        highlightedImage:[UIImage imageNamed:@"bg-menuitem-highlighted.png"]
                                                            ContentImage:[UIImage imageNamed:@"icon-plus.png"]
                                                 highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
      [startItem setMenuButton:YES];
     
-    AwesomeMenuItem *barcode = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"barcode.png"]
+     barcode = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"barcode.png"]
                                                        highlightedImage:[UIImage imageNamed:@"bg-menuitem-highlighted.png"]
                                                            ContentImage:[UIImage imageNamed:@"icon-plus.png"]
                                                 highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
@@ -73,21 +96,21 @@
     [barcode setIndex:[[NSNumber alloc] initWithInt:1]];
     [menus addObject:barcode];
     
-    AwesomeMenuItem *creditcard = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"credit_card.png"]
+    creditcard = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"credit_card.png"]
                                                        highlightedImage:[UIImage imageNamed:@"bg-menuitem-highlighted.png"]
                                                            ContentImage:[UIImage imageNamed:@"icon-plus.png"]
                                                 highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
     [creditcard setIndex:[[NSNumber alloc] initWithInt:2]];
     [menus addObject:creditcard];
     
-    AwesomeMenuItem *mail = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"mail.png"]
+    mail = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"mail.png"]
                                                        highlightedImage:[UIImage imageNamed:@"bg-menuitem-highlighted.png"]
                                                            ContentImage:[UIImage imageNamed:@"icon-plus.png"]
                                                 highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
     [mail setIndex:[[NSNumber alloc] initWithInt:3]];
     [menus addObject:mail];
     
-    AwesomeMenuItem *mappin = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"map_pin.png"]
+    mappin = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"map_pin.png"]
                                                        highlightedImage:[UIImage imageNamed:@"bg-menuitem-highlighted.png"]
                                                            ContentImage:[UIImage imageNamed:@"icon-plus.png"]
                                                 highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
@@ -95,7 +118,7 @@
     [menus addObject:mappin];
     
     
-    AwesomeMenuItem *process = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"process.png"]
+    process = [[AwesomeMenuItem alloc] initWithImage:[UIImage imageNamed:@"process.png"]
                                                        highlightedImage:[UIImage imageNamed:@"bg-menuitem-highlighted.png"]
                                                            ContentImage:[UIImage imageNamed:@"icon-plus.png"]
                                                 highlightedContentImage:[UIImage imageNamed:@"icon-plus-highlighted.png"]];
@@ -104,7 +127,7 @@
     
    
     
-    AwesomeMenu *menu = [[AwesomeMenu alloc] initWithFrame:self.view.bounds startItem:startItem optionMenus:menus];
+    menu = [[AwesomeMenu alloc] initWithFrame:self.view.bounds startItem:startItem optionMenus:menus];
     menu.delegate = self;
 
     menu.menuWholeAngle = 3.0;
@@ -118,10 +141,10 @@
     
     [self.view addSubview:menu];
     
-    selectedMenuItem = [[UILabel alloc] init];
-    [selectedMenuItem setFrame:CGRectMake(10, 40, 200, 40)];
-
-    [self.view addSubview:selectedMenuItem];
+//    selectedMenuItem = [[UILabel alloc] init];
+//    [selectedMenuItem setFrame:CGRectMake(10, 40, 200, 40)];
+//
+//    [self.view addSubview:selectedMenuItem];
 
 }
 
@@ -129,22 +152,40 @@
 
 - (void)awesomeMenu:(AwesomeMenu *)menu selectedItem:(AwesomeMenuItem *)item didSelectIndex:(NSInteger)idx{
     
-    selectedMenuItem.text = [[NSString alloc] initWithFormat:@"Selected menu : %@",item.index];
-    
-
-//    barcode
-    
-    MSTBarCodeViewController *NVC = [self.storyboard instantiateViewControllerWithIdentifier:@"barcode"];
-    [self presentViewController:NVC animated:YES completion:nil];
-    
-    NSLog(@"Stacked View controllers %@",[self.navigationController viewControllers]);
-    
+//    selectedMenuItem.text = [[NSString alloc] initWithFormat:@"Selected menu : %@",item.index];
+    if(_index){
+    if (([item.index isEqualToNumber:[NSNumber numberWithInt:1]]) && (![item.index isEqualToNumber:_index]))
+    {
+        [self performSegueWithIdentifier:@"barcodeClick" sender:self];
+    }else if (([item.index isEqualToNumber:[NSNumber numberWithInt:2]]) && (![item.index isEqualToNumber:_index]))
+    {
+        [self performSegueWithIdentifier:@"creditcard" sender:self];
+    }else if (([item.index isEqualToNumber:[NSNumber numberWithInt:3]]) && (![item.index isEqualToNumber:_index]))
+    {
+        [self performSegueWithIdentifier:@"mail" sender:self];
+    }
+    else if (([item.index isEqualToNumber:[NSNumber numberWithInt:4]]) && (![item.index isEqualToNumber:_index]))
+    {
+        [self performSegueWithIdentifier:@"map" sender:self];
+    }
+    else if (([item.index isEqualToNumber:[NSNumber numberWithInt:5]]) && (![item.index isEqualToNumber:_index]))
+    {
+        [self performSegueWithIdentifier:@"settings" sender:self];
+    }
+    }
     
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-}
+
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    
+//    if ([[segue identifier] isEqualToString:@"barcodeClick"])
+//    {
+//        MSTBarCodeViewController *translationQuizAssociateVC = [segue destinationViewController];
+//    }else
+//    
+//}
 
 - (void)awesomeMenuDidFinishAnimationClose:(AwesomeMenu *)menu{
     

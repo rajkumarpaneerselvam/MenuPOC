@@ -59,7 +59,7 @@
     
     if (ismenuOpen) {
         CGRect endRect = self.button.frame;
-        [menuView genieInTransitionWithDuration:0.4
+        [menuView genieInTransitionWithDuration:0.7
                             destinationRect:endRect
                             destinationEdge:BCRectEdgeTop
                                  completion:^{
@@ -71,7 +71,7 @@
     }else{
         [menuView setHidden:NO];
         CGRect startRect = self.button.frame;
-        [menuView genieOutTransitionWithDuration:0.4
+        [menuView genieOutTransitionWithDuration:0.7
                                        startRect:startRect
                                        startEdge:BCRectEdgeTop
                                       completion:^{
@@ -89,6 +89,8 @@
             MSTMyAccViewController *viewCtrl = (MSTMyAccViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTMyAccViewController"];
             [self presentViewController:viewCtrl  animated:YES completion:nil];
             NSLog(@"Button %ld is clicked",(long)[sender tag]);
+            
+//            [self performSegueWithIdentifier:@"barcodeClick" sender:self];
             break;
         }
         case 2:
@@ -151,10 +153,14 @@
     [self.view addSubview:button];
  
 
-    menuView = [[UIView alloc] initWithFrame:CGRectMake(57,310,200,150)];
-    [menuView setBackgroundColor:[UIColor lightGrayColor]];
+    menuView = [[UIView alloc] initWithFrame:CGRectMake(20,330,280,160)];
+    
+    UIColor *background = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"BoxyCall.png"]];
+    menuView.backgroundColor = background;
+    
+//    [menuView setBackgroundColor:[UIColor lightGrayColor]];
     [menuView setHidden:YES];
-    [menuView.layer setCornerRadius:8.0f];
+//    [menuView.layer setCornerRadius:8.0f];
     
     
     
@@ -193,7 +199,7 @@
 
     
     [self.view addSubview:menuView];
-    [menuView setHidden:NO];
+    [menuView setHidden:YES];
     
 }
 
