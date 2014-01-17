@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DA3F7C318897F45000AFB02 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA3F7C218897F45000AFB02 /* MessageUI.framework */; };
+		4DA3F7C518899E80000AFB02 /* chaseLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA3F7C418899E80000AFB02 /* chaseLogo.png */; };
+		4DA3F7C71889A4CB000AFB02 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA3F7C61889A4CB000AFB02 /* MapKit.framework */; };
 		BE8DAD631883587400CCF2DB /* MSTSlideUpMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8DAD621883587400CCF2DB /* MSTSlideUpMenuViewController.m */; };
 		BE8DAD6618835B2600CCF2DB /* MSTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8DAD6518835B2600CCF2DB /* MSTMenuViewController.m */; };
 		BE8FAD74188373A900EC5F84 /* MSTUIViewClickPassthrough.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8FAD73188373A900EC5F84 /* MSTUIViewClickPassthrough.m */; };
@@ -89,6 +92,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4DA3F7C218897F45000AFB02 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4DA3F7C418899E80000AFB02 /* chaseLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chaseLogo.png; sourceTree = "<group>"; };
+		4DA3F7C61889A4CB000AFB02 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		BE8DAD611883587400CCF2DB /* MSTSlideUpMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTSlideUpMenuViewController.h; sourceTree = "<group>"; };
 		BE8DAD621883587400CCF2DB /* MSTSlideUpMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTSlideUpMenuViewController.m; sourceTree = "<group>"; };
 		BE8DAD6418835B2600CCF2DB /* MSTMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTMenuViewController.h; sourceTree = "<group>"; };
@@ -190,6 +196,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA3F7C71889A4CB000AFB02 /* MapKit.framework in Frameworks */,
+				4DA3F7C318897F45000AFB02 /* MessageUI.framework in Frameworks */,
 				EACE18AB188586D2006480A6 /* QuartzCore.framework in Frameworks */,
 				BEA202F81877A71D0039B2F7 /* CoreGraphics.framework in Frameworks */,
 				BEA202FA1877A71D0039B2F7 /* UIKit.framework in Frameworks */,
@@ -233,6 +241,8 @@
 		BEA202F41877A71D0039B2F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4DA3F7C61889A4CB000AFB02 /* MapKit.framework */,
+				4DA3F7C218897F45000AFB02 /* MessageUI.framework */,
 				EACE18AA188586D2006480A6 /* QuartzCore.framework */,
 				BEA202F51877A71D0039B2F7 /* Foundation.framework */,
 				BEA202F71877A71D0039B2F7 /* CoreGraphics.framework */,
@@ -315,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				EEC213051888F6ED005FE7B4 /* BoxyCall.png */,
+				4DA3F7C418899E80000AFB02 /* chaseLogo.png */,
 				EEC213031888F01B005FE7B4 /* Menu1B_2.png */,
 				EEC213011888EE97005FE7B4 /* Menu1B.png */,
 				EEC212FF1888EBF8005FE7B4 /* Menu1BG.png */,
@@ -498,6 +509,7 @@
 				BEA203311877AA400039B2F7 /* amazing-gerbera-flower-wallpaper-wide-full-hd.jpg in Resources */,
 				EEC212F01888E59E005FE7B4 /* process_big.png in Resources */,
 				EEC212E81888E59E005FE7B4 /* mail.png in Resources */,
+				4DA3F7C518899E80000AFB02 /* chaseLogo.png in Resources */,
 				EEC212DF1888E59E005FE7B4 /* credit_card.png in Resources */,
 				EEC212E11888E59E005FE7B4 /* credit_card_big.png in Resources */,
 				EEC212D81888E59E005FE7B4 /* bg-addbutton-highlighted@2x.png in Resources */,
