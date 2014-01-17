@@ -37,6 +37,10 @@
        ContentImage:(UIImage *)cimg
 highlightedContentImage:(UIImage *)hcimg;
 
+-(void)registerForNotification;
+-(void)deregisterForNotification;
+
+
 
 @end
 

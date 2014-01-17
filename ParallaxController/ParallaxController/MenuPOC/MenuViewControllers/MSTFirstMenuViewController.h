@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MSTCustomButton.h"
 
 @interface MSTFirstMenuViewController : UIViewController {
     BOOL ismenuOpen;
@@ -19,10 +20,13 @@
 @property (nonatomic, retain) IBOutlet UIView *dragMenuView;
 
 
-@property (nonatomic,retain) IBOutlet UIButton *myAccButton;
-@property (nonatomic,retain) IBOutlet UIButton *myProButton;
-@property (nonatomic,retain) IBOutlet UIButton *transButton;
-@property (nonatomic,retain) IBOutlet UIButton *stmtButton;
+@property (nonatomic,retain) IBOutlet MSTCustomButton *myAccButton;
+@property (nonatomic,retain) IBOutlet MSTCustomButton *myProButton;
+@property (nonatomic,retain) IBOutlet MSTCustomButton *transButton;
+@property (nonatomic,retain) IBOutlet MSTCustomButton *stmtButton;
+@property (nonatomic,retain) IBOutlet MSTCustomButton *settingsButton;
+@property (nonatomic,retain) IBOutlet UIImageView *bgView;
+
 
 
 @property (nonatomic, retain) IBOutlet UILabel *titleLbl;
