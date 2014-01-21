@@ -20,8 +20,11 @@
     AwesomeMenuItem *mappin;
     AwesomeMenuItem *process;
     AwesomeMenu *menu;
+    
+    NSInteger previousIndex;
 }
 
 @property (nonatomic, strong) NSNumber *index;
+@property (nonatomic, retain) IBOutlet UIView *menuItemContainerView;
 
 @end

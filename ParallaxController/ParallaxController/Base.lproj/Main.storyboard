@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8DR-4c-Dg4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8DR-4c-Dg4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -1146,23 +1146,31 @@
                                     <action selector="onClickBack:" destination="Ivo-Y1-bD2" eventType="touchUpInside" id="jiM-dL-mkf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="asd-O8-PRO">
-                                <rect key="frame" x="109" y="162" width="103" height="59"/>
+                            <view contentMode="scaleToFill" id="5uH-Rk-sW1">
+                                <rect key="frame" x="0.0" y="55" width="320" height="454"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="46"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q3d-KG-cQj">
-                                <rect key="frame" x="116" y="208" width="104" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="139"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="asd-O8-PRO">
+                                        <rect key="frame" x="97" y="109" width="103" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="46"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q3d-KG-cQj">
+                                        <rect key="frame" x="108" y="176" width="104" height="151"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="139"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y7r-0x-6MB"/>
                     <connections>
+                        <outlet property="menuItemContainerView" destination="5uH-Rk-sW1" id="4ZG-is-46R"/>
                         <segue destination="Urp-am-Ihp" kind="modal" identifier="barcodeClick" id="eay-eD-lYk"/>
                         <segue destination="N5s-43-Ulk" kind="modal" identifier="creditcard" id="35V-X7-lPU"/>
                         <segue destination="wiy-4e-NKL" kind="modal" identifier="mail" id="txI-kv-UKP"/>
@@ -2247,7 +2255,6 @@
         <!--First Menu Credit Card View Controller-->
         <scene sceneID="fWF-o8-3Tn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qWh-O3-Pip" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MSTFirstMenuCreditCardViewController" id="JAL-db-pCG" customClass="MSTFirstMenuCreditCardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W8s-Jz-ikN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -2549,6 +2556,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qWh-O3-Pip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1642" y="988"/>
         </scene>
@@ -3014,10 +3022,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oH3-zz-J1y"/>
-        <segue reference="GFF-GA-gXo"/>
-        <segue reference="OQl-sJ-AjH"/>
-        <segue reference="Bzg-Id-Axg"/>
-        <segue reference="y2y-xH-p3K"/>
+        <segue reference="eay-eD-lYk"/>
+        <segue reference="ubD-Oy-qgh"/>
+        <segue reference="bSv-0x-1yo"/>
+        <segue reference="w1l-Z0-nOs"/>
+        <segue reference="0dX-lV-UUa"/>
     </inferredMetricsTieBreakers>
 </document>

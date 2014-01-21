@@ -40,6 +40,11 @@
 		EA03581F18899FB7002EA17A /* MSTCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA03581E18899FB7002EA17A /* MSTCustomButton.m */; };
 		EACE18AB188586D2006480A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACE18AA188586D2006480A6 /* QuartzCore.framework */; };
 		EACE18B3188979C4006480A6 /* dashboardbg.png in Resources */ = {isa = PBXBuildFile; fileRef = EACE18B2188979C4006480A6 /* dashboardbg.png */; };
+		EE270DCD188EE9B10002B900 /* MSTBarCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCC188EE9B10002B900 /* MSTBarCodeView.m */; };
+		EE270DD0188EE9CE0002B900 /* MSTCredicardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCF188EE9CE0002B900 /* MSTCredicardView.m */; };
+		EE270DD3188EE9E20002B900 /* MSTmailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DD2188EE9E20002B900 /* MSTmailView.m */; };
+		EE270DD6188EE9F50002B900 /* MSTMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DD5188EE9F50002B900 /* MSTMapView.m */; };
+		EE270DD9188EEA040002B900 /* MSTSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DD8188EEA040002B900 /* MSTSettingsView.m */; };
 		EEC212D41888E59E005FE7B4 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A11888E59E005FE7B4 /* barcode.png */; };
 		EEC212D51888E59E005FE7B4 /* barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A21888E59E005FE7B4 /* barcode@2x.png */; };
 		EEC212D61888E59E005FE7B4 /* barcode_big.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A31888E59E005FE7B4 /* barcode_big.png */; };
@@ -150,6 +155,16 @@
 		EA03581E18899FB7002EA17A /* MSTCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTCustomButton.m; path = CustomButton/MSTCustomButton.m; sourceTree = "<group>"; };
 		EACE18AA188586D2006480A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EACE18B2188979C4006480A6 /* dashboardbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboardbg.png; sourceTree = "<group>"; };
+		EE270DCB188EE9B10002B900 /* MSTBarCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTBarCodeView.h; sourceTree = "<group>"; };
+		EE270DCC188EE9B10002B900 /* MSTBarCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTBarCodeView.m; sourceTree = "<group>"; };
+		EE270DCE188EE9CE0002B900 /* MSTCredicardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTCredicardView.h; sourceTree = "<group>"; };
+		EE270DCF188EE9CE0002B900 /* MSTCredicardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTCredicardView.m; sourceTree = "<group>"; };
+		EE270DD1188EE9E20002B900 /* MSTmailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTmailView.h; sourceTree = "<group>"; };
+		EE270DD2188EE9E20002B900 /* MSTmailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTmailView.m; sourceTree = "<group>"; };
+		EE270DD4188EE9F50002B900 /* MSTMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTMapView.h; sourceTree = "<group>"; };
+		EE270DD5188EE9F50002B900 /* MSTMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTMapView.m; sourceTree = "<group>"; };
+		EE270DD7188EEA040002B900 /* MSTSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTSettingsView.h; sourceTree = "<group>"; };
+		EE270DD8188EEA040002B900 /* MSTSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTSettingsView.m; sourceTree = "<group>"; };
 		EEC212A11888E59E005FE7B4 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 		EEC212A21888E59E005FE7B4 /* barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barcode@2x.png"; sourceTree = "<group>"; };
 		EEC212A31888E59E005FE7B4 /* barcode_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode_big.png; sourceTree = "<group>"; };
@@ -351,12 +366,31 @@
 		EACE189718847AFF006480A6 /* MenuPOC */ = {
 			isa = PBXGroup;
 			children = (
+				EE270DCA188EE9B10002B900 /* MenuItemsViews */,
 				EEC212A01888E59E005FE7B4 /* Images */,
 				EEC212BE1888E59E005FE7B4 /* MenuItemsViewControllers */,
 				EEC212CD1888E59E005FE7B4 /* MenuViewControllers */,
 				EECF7C3C1884CB9B004770CD /* UIComponents */,
 			);
 			name = MenuPOC;
+			sourceTree = "<group>";
+		};
+		EE270DCA188EE9B10002B900 /* MenuItemsViews */ = {
+			isa = PBXGroup;
+			children = (
+				EE270DCB188EE9B10002B900 /* MSTBarCodeView.h */,
+				EE270DCC188EE9B10002B900 /* MSTBarCodeView.m */,
+				EE270DCE188EE9CE0002B900 /* MSTCredicardView.h */,
+				EE270DCF188EE9CE0002B900 /* MSTCredicardView.m */,
+				EE270DD1188EE9E20002B900 /* MSTmailView.h */,
+				EE270DD2188EE9E20002B900 /* MSTmailView.m */,
+				EE270DD4188EE9F50002B900 /* MSTMapView.h */,
+				EE270DD5188EE9F50002B900 /* MSTMapView.m */,
+				EE270DD7188EEA040002B900 /* MSTSettingsView.h */,
+				EE270DD8188EEA040002B900 /* MSTSettingsView.m */,
+			);
+			name = MenuItemsViews;
+			path = ParallaxController/MenuPOC/MenuItemsViews;
 			sourceTree = "<group>";
 		};
 		EEC212A01888E59E005FE7B4 /* Images */ = {
@@ -427,7 +461,7 @@
 				EA03581718899953002EA17A /* MSTFirstMenuMapViewController.m */,
 				EA0358191889997D002EA17A /* MSTFirstMenuSettingsViewController.h */,
 				EA03581A1889997D002EA17A /* MSTFirstMenuSettingsViewController.m */,
- 				4DA3F7C81889BE24000AFB02 /* SecondMenuDetails */,
+				4DA3F7C81889BE24000AFB02 /* SecondMenuDetails */,
 			);
 			name = MenuItemsViewControllers;
 			path = ParallaxController/MenuPOC/MenuItemsViewControllers;
@@ -614,6 +648,7 @@
 			files = (
 				EEC212F21888E59E005FE7B4 /* MSTCreditCardViewController.m in Sources */,
 				EEC212F61888E59E005FE7B4 /* MSTMyAccViewController.m in Sources */,
+				EE270DCD188EE9B10002B900 /* MSTBarCodeView.m in Sources */,
 				EECF7C431884CB9B004770CD /* AwesomeMenuItem.m in Sources */,
 				BEA203021877A71D0039B2F7 /* main.m in Sources */,
 				EA03581818899953002EA17A /* MSTFirstMenuMapViewController.m in Sources */,
@@ -621,8 +656,10 @@
 				EEC212F91888E59E005FE7B4 /* MSTSecondMenuViewController.m in Sources */,
 				EEC212F11888E59E005FE7B4 /* MSTBarCodeViewController.m in Sources */,
 				BE8DAD631883587400CCF2DB /* MSTSlideUpMenuViewController.m in Sources */,
+				EE270DD9188EEA040002B900 /* MSTSettingsView.m in Sources */,
 				EEC212F81888E59E005FE7B4 /* MSTFirstMenuViewController.m in Sources */,
 				BE8FAD74188373A900EC5F84 /* MSTUIViewClickPassthrough.m in Sources */,
+				EE270DD6188EE9F50002B900 /* MSTMapView.m in Sources */,
 				EA03581F18899FB7002EA17A /* MSTCustomButton.m in Sources */,
 				BE8DAD6618835B2600CCF2DB /* MSTMenuViewController.m in Sources */,
 				EEC212F31888E59E005FE7B4 /* MSTMailViewController.m in Sources */,
@@ -636,6 +673,8 @@
 				EA03581518899934002EA17A /* MSTFirstMenuMailViewController.m in Sources */,
 				EEC212F51888E59E005FE7B4 /* MSTMapViewController.m in Sources */,
 				BEA2030C1877A71D0039B2F7 /* MSTViewController.m in Sources */,
+				EE270DD0188EE9CE0002B900 /* MSTCredicardView.m in Sources */,
+				EE270DD3188EE9E20002B900 /* MSTmailView.m in Sources */,
 				BEA203341877AB6C0039B2F7 /* MSTImageViewController.m in Sources */,
 				EEC212F71888E59E005FE7B4 /* MSTSettingsViewController.m in Sources */,
 				EA03581B1889997D002EA17A /* MSTFirstMenuSettingsViewController.m in Sources */,
