@@ -17,7 +17,7 @@
 @property (nonatomic,retain) IBOutlet UIView *menuView;
 @property (nonatomic,retain) IBOutlet UIButton *button;
 @property (nonatomic,retain) IBOutlet UIButton *backButton;
-@property (nonatomic, retain) IBOutlet UIView *dragMenuView;
+@property (nonatomic, retain) IBOutlet UIView *swipeUpView;
 
 
 @property (nonatomic,retain) IBOutlet MSTCustomButton *myAccButton;

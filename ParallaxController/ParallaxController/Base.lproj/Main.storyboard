@@ -954,10 +954,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GgH-46-fl0">
-                                <rect key="frame" x="129" y="535" width="56" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="GgH-46-fl0">
+                                <rect key="frame" x="115" y="527" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Menu">
+                                <state key="normal" image="pullup.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -2247,7 +2247,6 @@
         <!--First Menu Credit Card View Controller-->
         <scene sceneID="fWF-o8-3Tn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qWh-O3-Pip" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="MSTFirstMenuCreditCardViewController" id="JAL-db-pCG" customClass="MSTFirstMenuCreditCardViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W8s-Jz-ikN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -2549,6 +2548,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qWh-O3-Pip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1642" y="988"/>
         </scene>
@@ -3007,6 +3007,7 @@
         <image name="map_pin_big.png" width="128" height="128"/>
         <image name="process.png" width="32" height="32"/>
         <image name="process_big.png" width="128" height="128"/>
+        <image name="pullup.png" width="84" height="17"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
