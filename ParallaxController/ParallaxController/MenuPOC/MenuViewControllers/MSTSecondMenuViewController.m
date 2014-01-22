@@ -28,6 +28,7 @@
       NSMutableArray *logoArray;
         FXBlurView *menuView;
     UIImageView *bgView;
+    FXBlurView *overlayView;
 }
 
 @end
@@ -52,14 +53,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-  
+    CGRect frame = [UIScreen mainScreen].applicationFrame;
+
+    // overlay view
+    overlayView = [[FXBlurView alloc] initWithFrame:CGRectMake(frame.origin.x, frame.size.height - MenuTable_Height, frame.size.width, frame.size.height - 10)];
+    [overlayView setBackgroundColor:[UIColor lightGrayColor]];
+    //[overlayView setAlpha:0.4];
+    [self.view addSubview:overlayView];
     
     
     // set tableview delegate and datasource
     [self.menuTableView setDelegate:self];
     [self.menuTableView setDataSource:self];
-    CGRect frame = [UIScreen mainScreen].applicationFrame;
     [self.menuTableView setFrame:CGRectMake(0, frame.origin.y + frame.size.height, frame.size.width,MenuTable_Height)];
     [self.menuTableView setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:self.menuTableView];
@@ -70,9 +75,11 @@
     [menuView setBackgroundColor:[UIColor lightGrayColor]];
  //   [self.menuTableView setBackgroundView:menuView];
     
+   
     // initial time setup
     [self setIsMenuOpen:NO];
     [self.bgOverlayView setHidden:YES];
+    [overlayView setHidden:YES];
     // subviews frames
     CGRect lblFrame = self.lblTitle.frame;
     CGFloat y = (frame.origin.y + frame.size.height) - lblFrame.size.height;
@@ -116,12 +123,12 @@
                          if (self.isMenuOpen) {
                              self.menuTableView.frame = CGRectMake(0, frame.origin.y + frame.size.height, frame.size.width, MenuTable_Height);
                              // Hide overlayview
-                             [self.bgOverlayView setHidden:YES];
+                             [overlayView setHidden:YES];
                              
                          } else {
                              self.menuTableView.frame = CGRectMake(0, (frame.origin.y + frame.size.height) -  self.menuTableView.frame.size.height , frame.size.width, MenuTable_Height);
                              // Hide overlayview
-                             [self.bgOverlayView setHidden:NO];
+                             [overlayView setHidden:NO];
                          }
                      }
                      completion:^(BOOL finished){
@@ -213,10 +220,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        
     }
     // Set the data for this cell:
+    [tableView setSeparatorColor:[UIColor whiteColor]];
     
-    //[cell setBackgroundColor:[UIColor clearColor]];
+    [cell setBackgroundColor:[UIColor clearColor]];
 //    bgView = [[UIImageView alloc] initWithFrame:cell.frame];
 //    [menuView setFrame:cell.frame];
 //    [bgView setImage:[UIImage imageNamed:@"dashboardbg.png"]];
@@ -281,6 +290,7 @@
     
     }
     [self.view bringSubviewToFront:aTargetView];
+    [self.view bringSubviewToFront:overlayView];
     [self.view bringSubviewToFront:self.menuTableView];
      // call content view with animation
     [self animateMethod:indexPath targetView:aTargetView];
