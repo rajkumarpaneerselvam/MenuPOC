@@ -10,13 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParallaxController/MenuPOC/MenuViewControllers/MSTSecondMenuViewController.m"
-            timestampString = "411685159.412612"
+            timestampString = "412092974.471383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "242"
-            endingLineNumber = "242"
-            landmarkName = "-startReorderAction:"
-            landmarkType = "5">
+            startingLineNumber = "249"
+            endingLineNumber = "249">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -26,13 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParallaxController/MenuPOC/MenuViewControllers/MSTSecondMenuViewController.m"
-            timestampString = "411685159.412612"
+            timestampString = "412092974.471383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
-            landmarkName = "-callMapView"
-            landmarkType = "5">
+            startingLineNumber = "276"
+            endingLineNumber = "276">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,13 +38,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParallaxController/MenuPOC/MenuViewControllers/MSTSecondMenuViewController.m"
-            timestampString = "411685159.412612"
+            timestampString = "412092974.471383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
-            landmarkName = "-callMenuDetailView"
-            landmarkType = "5">
+            startingLineNumber = "270"
+            endingLineNumber = "270">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,12 +52,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParallaxController/MenuPOC/MenuViewControllers/MSTSecondMenuViewController.m"
-            timestampString = "411685159.412612"
+            timestampString = "412092974.471383"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-loadMenuViewWithTitle:"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "-tapAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
