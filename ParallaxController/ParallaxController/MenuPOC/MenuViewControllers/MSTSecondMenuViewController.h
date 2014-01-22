@@ -19,7 +19,6 @@
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tapAction;
 @property (weak, nonatomic) IBOutlet UITableView *menuTableView;
 @property (assign) BOOL isMenuOpen;
-@property (weak, nonatomic) IBOutlet UIView *bgOverlayView;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *overlayTapGuesture;
 
 

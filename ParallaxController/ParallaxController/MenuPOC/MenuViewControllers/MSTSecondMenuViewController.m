@@ -20,15 +20,15 @@
 #define Menu_Offset 30
 
 @interface  MSTSecondMenuViewController () {
-      MSTBarCodeView *barcodeView;
-    MSTCredicardView *creditCardView;
-    MSTmailView *mailView;
-    MSTMapView *mapView;
-    MSTSettingsView *settingsView;
-      NSMutableArray *logoArray;
-        FXBlurView *menuView;
-    UIImageView *bgView;
-    FXBlurView *overlayView;
+        MSTBarCodeView *barcodeView;
+        MSTCredicardView *creditCardView;
+        MSTmailView *mailView;
+        MSTMapView *mapView;
+        MSTSettingsView *settingsView;
+        // NSMutableArray *logoArray;
+        // FXBlurView *menuView;
+        UIImageView *bgView;
+        FXBlurView *overlayView;
 }
 
 @end
@@ -40,7 +40,6 @@
 @synthesize menuArray = _menuArray;
 @synthesize tapGuesture = _tapGuesture;
 @synthesize isMenuOpen = _isMenuOpen;
-@synthesize bgOverlayView = _bgOverlayView;
 @synthesize overlayTapGuesture = _overlayTapGuesture;
 
 - (void)didReceiveMemoryWarning {
@@ -57,7 +56,10 @@
 
     // overlay view
     overlayView = [[FXBlurView alloc] initWithFrame:CGRectMake(frame.origin.x, frame.size.height - MenuTable_Height, frame.size.width, frame.size.height - 10)];
-    [overlayView setBackgroundColor:[UIColor lightGrayColor]];
+//    [overlayView setBackgroundColor:[UIColor lightGrayColor]];
+    [overlayView setBlurEnabled:YES];
+    [overlayView setBlurRadius:10];
+    [overlayView setDynamic:YES];
     //[overlayView setAlpha:0.4];
     [self.view addSubview:overlayView];
     
@@ -69,16 +71,11 @@
     [self.menuTableView setBackgroundColor:[UIColor clearColor]];
     [self.view addSubview:self.menuTableView];
     
-    // Bg blur effects view
-    menuView = [[FXBlurView alloc] initWithFrame:self.menuTableView.frame];
-    [menuView setBlurEnabled:YES];
-    [menuView setBackgroundColor:[UIColor lightGrayColor]];
- //   [self.menuTableView setBackgroundView:menuView];
+
     
    
     // initial time setup
     [self setIsMenuOpen:NO];
-    [self.bgOverlayView setHidden:YES];
     [overlayView setHidden:YES];
     // subviews frames
     CGRect lblFrame = self.lblTitle.frame;
@@ -103,11 +100,11 @@
                       [NSString stringWithFormat:@"Locations"],
                       [NSString stringWithFormat:@"Settings"],
                       nil];
-    logoArray = [[NSMutableArray alloc] initWithObjects:@"barcode_big",
-                 @"credit_card_big",
-                 @"mail_big",
-                 @"map_pin_big",
-                 @"process_big", nil];
+//    logoArray = [[NSMutableArray alloc] initWithObjects:@"barcode_big",
+//                 @"credit_card_big",
+//                 @"mail_big",
+//                 @"map_pin_big",
+//                 @"process_big", nil];
     
 }
 
@@ -122,20 +119,22 @@
                      animations:^{
                          if (self.isMenuOpen) {
                              self.menuTableView.frame = CGRectMake(0, frame.origin.y + frame.size.height, frame.size.width, MenuTable_Height);
-                             // Hide overlayview
-                             [overlayView setHidden:YES];
+                             [overlayView setFrame:self.menuTableView.frame];
                              
                          } else {
                              self.menuTableView.frame = CGRectMake(0, (frame.origin.y + frame.size.height) -  self.menuTableView.frame.size.height , frame.size.width, MenuTable_Height);
+                             
+                             [overlayView setFrame:self.menuTableView.frame];
                              // Hide overlayview
                              [overlayView setHidden:NO];
                          }
                      }
                      completion:^(BOOL finished){
-                         NSLog(@"Done!");
                          if (self.isMenuOpen) {
                              [self.lblTitle setHidden:NO];
                              [self setIsMenuOpen:NO];
+                             // Hide overlayview
+                             [overlayView setHidden:YES];
                          }
                      }];
 }
@@ -168,7 +167,6 @@
     [self setTapGuesture:nil];
     [self setTapAction:nil];
     [self setMenuTableView:nil];
-    [self setBgOverlayView:nil];
     [self setOverlayTapGuesture:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
@@ -346,15 +344,15 @@
     [self.menuArray insertObject:menuObject atIndex:0];
     
     // re-order logo datasource
-    id logoObject = [logoArray objectAtIndex:indexPath.row];
-    [logoArray removeObjectAtIndex:indexPath.row];
-    [logoArray insertObject:logoObject atIndex:0];
+//    id logoObject = [logoArray objectAtIndex:indexPath.row];
+//    [logoArray removeObjectAtIndex:indexPath.row];
+//    [logoArray insertObject:logoObject atIndex:0];
 }
 
 - (IBAction)menuDismissAction:(id)sender {
     [self setIsMenuOpen:YES];
     [self tapAction:sender];
-    [self.bgOverlayView setHidden:YES];
+    [overlayView setHidden:YES];
 }
 
 
