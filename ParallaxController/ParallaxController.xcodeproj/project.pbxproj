@@ -42,6 +42,7 @@
 		EA38D73D1889CD830074E328 /* pullup.png in Resources */ = {isa = PBXBuildFile; fileRef = EA38D73C1889CD830074E328 /* pullup.png */; };
 		EACE18AB188586D2006480A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACE18AA188586D2006480A6 /* QuartzCore.framework */; };
 		EACE18B3188979C4006480A6 /* dashboardbg.png in Resources */ = {isa = PBXBuildFile; fileRef = EACE18B2188979C4006480A6 /* dashboardbg.png */; };
+		EAEB7DF318900D7A00D70D2C /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB7DF218900D7A00D70D2C /* FXBlurView.m */; };
 		EE270DCD188EE9B10002B900 /* MSTBarCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCC188EE9B10002B900 /* MSTBarCodeView.m */; };
 		EE270DD0188EE9CE0002B900 /* MSTCredicardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCF188EE9CE0002B900 /* MSTCredicardView.m */; };
 		EE270DD3188EE9E20002B900 /* MSTmailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DD2188EE9E20002B900 /* MSTmailView.m */; };
@@ -159,6 +160,8 @@
 		EA38D73C1889CD830074E328 /* pullup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullup.png; sourceTree = "<group>"; };
 		EACE18AA188586D2006480A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		EACE18B2188979C4006480A6 /* dashboardbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboardbg.png; sourceTree = "<group>"; };
+		EAEB7DF118900D7A00D70D2C /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		EAEB7DF218900D7A00D70D2C /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		EE270DCB188EE9B10002B900 /* MSTBarCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTBarCodeView.h; sourceTree = "<group>"; };
 		EE270DCC188EE9B10002B900 /* MSTBarCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTBarCodeView.m; sourceTree = "<group>"; };
 		EE270DCE188EE9CE0002B900 /* MSTCredicardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTCredicardView.h; sourceTree = "<group>"; };
@@ -379,6 +382,15 @@
 			name = MenuPOC;
 			sourceTree = "<group>";
 		};
+		EAEB7DF018900D7A00D70D2C /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				EAEB7DF118900D7A00D70D2C /* FXBlurView.h */,
+				EAEB7DF218900D7A00D70D2C /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
 		EE270DCA188EE9B10002B900 /* MenuItemsViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +511,7 @@
 		EECF7C3C1884CB9B004770CD /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				EAEB7DF018900D7A00D70D2C /* FXBlurView */,
 				EA03581C18899F8F002EA17A /* CustomButton */,
 				EEC212FB1888E5BD005FE7B4 /* UIView+Genie */,
 				EECF7C3D1884CB9B004770CD /* AwesomeMenu */,
@@ -656,6 +669,7 @@
 			files = (
 				EEC212F21888E59E005FE7B4 /* MSTCreditCardViewController.m in Sources */,
 				EEC212F61888E59E005FE7B4 /* MSTMyAccViewController.m in Sources */,
+				EAEB7DF318900D7A00D70D2C /* FXBlurView.m in Sources */,
 				EE270DCD188EE9B10002B900 /* MSTBarCodeView.m in Sources */,
 				EECF7C431884CB9B004770CD /* AwesomeMenuItem.m in Sources */,
 				BEA203021877A71D0039B2F7 /* main.m in Sources */,

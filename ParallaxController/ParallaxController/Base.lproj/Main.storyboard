@@ -3000,88 +3000,15 @@
     </scenes>
     <resources>
         <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
-        <image name="barcode.png" width="32" height="32"/>
         <image name="barcode.png" width="32" height="32"/>
         <image name="barcode_big.png" width="128" height="128"/>
-        <image name="barcode_big.png" width="128" height="128"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
-        <image name="credit_card.png" width="32" height="32"/>
         <image name="credit_card.png" width="32" height="32"/>
         <image name="credit_card_big.png" width="128" height="128"/>
-        <image name="credit_card_big.png" width="128" height="128"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
-        <image name="mail.png" width="32" height="32"/>
         <image name="mail.png" width="32" height="32"/>
         <image name="mail_big.png" width="128" height="128"/>
-        <image name="mail_big.png" width="128" height="128"/>
         <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin.png" width="32" height="32"/>
-        <image name="map_pin_big.png" width="128" height="128"/>
         <image name="map_pin_big.png" width="128" height="128"/>
         <image name="process.png" width="32" height="32"/>
-        <image name="process_big.png" width="128" height="128"/>
         <image name="process_big.png" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
