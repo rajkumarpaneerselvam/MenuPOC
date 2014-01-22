@@ -15,9 +15,22 @@
 #import "MSTFirstMenuMapViewController.h"
 #import "MSTFirstMenuSettingsViewController.h"
 #import "MSTCustomButton.h"
+#import "MSTBarCodeView.h"
+#import "MSTCredicardView.h"
+#import "MSTmailView.h"
+#import "MSTMapView.h"
+#import "MSTSettingsView.h"
 
 
-@interface MSTFirstMenuViewController ()
+
+@interface MSTFirstMenuViewController () {
+    MSTBarCodeView *barcodeView;
+    MSTCredicardView *creditCardView;
+    MSTmailView *mailView;
+    MSTMapView *mapView;
+    MSTSettingsView *settingsView;
+
+}
 
 @end
 
@@ -119,32 +132,73 @@
 
 - (IBAction)onClickMenuFeatures:(id)sender {
 
-    [self onClickMenuButton:nil];
+//    [self onClickMenuButton:nil];
     switch ([sender tag]) {
         case 1: {
-            MSTMyAccViewController *viewCtrl = (MSTMyAccViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTMyAccViewController"];
-            [self presentViewController:viewCtrl  animated:NO completion:nil];
+            
+            if(!barcodeView){
+                barcodeView = [[MSTBarCodeView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:barcodeView];
+            }
+            
+            [self animateViewLefttoRight:barcodeView];
+            
+            
+            
+//            MSTMyAccViewController *viewCtrl = (MSTMyAccViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTMyAccViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 2: {
 
-            MSTFirstMenuCreditCardViewController *viewCtrl = (MSTFirstMenuCreditCardViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuCreditCardViewController"];
-            [self presentViewController:viewCtrl  animated:NO completion:nil];
+            if(!creditCardView){
+                creditCardView = [[MSTCredicardView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:creditCardView];
+            }
+            [self animateViewRighttoLeft:creditCardView];
+            
+            
+//            MSTFirstMenuCreditCardViewController *viewCtrl = (MSTFirstMenuCreditCardViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuCreditCardViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 3: {
-            MSTFirstMenuMailViewController *viewCtrl = (MSTFirstMenuMailViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMailViewController"];
-            [self presentViewController:viewCtrl  animated:NO completion:nil];
+            
+            if(!mailView){
+                mailView = [[MSTmailView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:mailView];
+            }
+            
+            [self animateViewLefttoRight:mailView];
+            
+//            MSTFirstMenuMailViewController *viewCtrl = (MSTFirstMenuMailViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMailViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 4: {
-            MSTFirstMenuMapViewController *viewCtrl = (MSTFirstMenuMapViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMapViewController"];
-            [self presentViewController:viewCtrl  animated:NO completion:nil];
+            if(!mapView){
+                mapView = [[MSTMapView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:mapView];
+            }
+            
+            [self animateViewRighttoLeft:mapView];
+
+//            MSTFirstMenuMapViewController *viewCtrl = (MSTFirstMenuMapViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMapViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 5: {
-            MSTFirstMenuSettingsViewController *viewCtrl = (MSTFirstMenuSettingsViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuSettingsViewController"];
-            [self presentViewController:viewCtrl  animated:NO completion:nil];
+            
+            if(!settingsView){
+                settingsView = [[MSTSettingsView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:settingsView];
+            }
+            
+            [self animateViewBottomToTop:settingsView];
+
+
+//            MSTFirstMenuSettingsViewController *viewCtrl = (MSTFirstMenuSettingsViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuSettingsViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
             
@@ -293,6 +347,46 @@
     
 
 }
+
+
+
+- (void)animateViewRighttoLeft:(UIView *)viewRef{
+    
+    [viewRef setFrame:CGRectMake(320, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [viewRef setFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+        
+    }];
+    [self.view bringSubviewToFront:viewRef];
+    [self.view bringSubviewToFront:menuView];
+}
+
+- (void)animateViewLefttoRight:(UIView *)viewRef{
+    
+    [viewRef setFrame:CGRectMake(-320, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [viewRef setFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+        
+    }];
+    [self.view bringSubviewToFront:viewRef];
+    [self.view bringSubviewToFront:menuView];
+}
+
+
+- (void)animateViewBottomToTop:(UIView *)viewRef{
+    
+    [viewRef setFrame:CGRectMake(0, self.view.frame.size.height-100, self.view.frame.size.width, self.view.frame.size.height-100)];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [viewRef setFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+        
+    }];
+    [self.view bringSubviewToFront:viewRef];
+    [self.view bringSubviewToFront:menuView];
+}
+
 
 
 @end

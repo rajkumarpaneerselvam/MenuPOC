@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/MSTFirstMenuViewController.m"
-            timestampString = "411596064.350204"
+            filePath = "ParallaxController/MenuPOC/MenuViewControllers/MSTSecondMenuViewController.m"
+            timestampString = "411685159.412612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "-onClickMenuFeatures:"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "-startReorderAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/MSTMyAccViewController.m"
-            timestampString = "411586919.567747"
+            filePath = "ParallaxController/MenuPOC/MenuViewControllers/MSTSecondMenuViewController.m"
+            timestampString = "411685159.412612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "-callMapView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/MSTFirstMenuViewController.m"
-            timestampString = "411596064.350204"
+            filePath = "ParallaxController/MenuPOC/MenuViewControllers/MSTSecondMenuViewController.m"
+            timestampString = "411685159.412612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "-loadDefaultView:"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
+            landmarkName = "-callMenuDetailView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ParallaxController/MenuPOC/MSTFirstMenuViewController.m"
-            timestampString = "411596064.350204"
+            filePath = "ParallaxController/MenuPOC/MenuViewControllers/MSTSecondMenuViewController.m"
+            timestampString = "411685159.412612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "-onClickMenuButton:"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "-loadMenuViewWithTitle:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

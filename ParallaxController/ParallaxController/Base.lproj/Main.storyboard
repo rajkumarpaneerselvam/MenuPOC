@@ -883,11 +883,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" id="bDg-XB-SWM">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" id="bDg-XB-SWM" customClass="FXBlurView">
                                 <rect key="frame" x="57" y="380" width="200" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboardbg.png" id="XHW-hb-PVd">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="XHW-hb-PVd">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -955,9 +955,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="GgH-46-fl0">
-                                <rect key="frame" x="115" y="527" width="84" height="30"/>
+                                <rect key="frame" x="115" y="533" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="pullup.png">
+                                <state key="normal" title="Menu">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -977,7 +977,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="IKH-Tr-WG7"/>
                     <connections>
@@ -1146,23 +1146,31 @@
                                     <action selector="onClickBack:" destination="Ivo-Y1-bD2" eventType="touchUpInside" id="jiM-dL-mkf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="asd-O8-PRO">
-                                <rect key="frame" x="109" y="162" width="103" height="59"/>
+                            <view contentMode="scaleToFill" id="5uH-Rk-sW1">
+                                <rect key="frame" x="0.0" y="55" width="320" height="454"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="46"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q3d-KG-cQj">
-                                <rect key="frame" x="116" y="208" width="104" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="139"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="asd-O8-PRO">
+                                        <rect key="frame" x="97" y="109" width="103" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="46"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q3d-KG-cQj">
+                                        <rect key="frame" x="108" y="176" width="104" height="151"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="139"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y7r-0x-6MB"/>
                     <connections>
+                        <outlet property="menuItemContainerView" destination="5uH-Rk-sW1" id="4ZG-is-46R"/>
                         <segue destination="Urp-am-Ihp" kind="modal" identifier="barcodeClick" id="eay-eD-lYk"/>
                         <segue destination="N5s-43-Ulk" kind="modal" identifier="creditcard" id="35V-X7-lPU"/>
                         <segue destination="wiy-4e-NKL" kind="modal" identifier="mail" id="txI-kv-UKP"/>
@@ -2996,18 +3004,89 @@
     </scenes>
     <resources>
         <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
+        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
+        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
+        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
+        <image name="amazing-gerbera-flower-wallpaper-wide-full-hd.jpg" width="1920" height="1200"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
+        <image name="barcode.png" width="32" height="32"/>
         <image name="barcode.png" width="32" height="32"/>
         <image name="barcode_big.png" width="128" height="128"/>
+        <image name="barcode_big.png" width="128" height="128"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
+        <image name="credit_card.png" width="32" height="32"/>
         <image name="credit_card.png" width="32" height="32"/>
         <image name="credit_card_big.png" width="128" height="128"/>
-        <image name="dashboardbg.png" width="307" height="375"/>
+        <image name="credit_card_big.png" width="128" height="128"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
+        <image name="mail.png" width="32" height="32"/>
         <image name="mail.png" width="32" height="32"/>
         <image name="mail_big.png" width="128" height="128"/>
+        <image name="mail_big.png" width="128" height="128"/>
         <image name="map_pin.png" width="32" height="32"/>
+        <image name="map_pin.png" width="32" height="32"/>
+        <image name="map_pin.png" width="32" height="32"/>
+        <image name="map_pin.png" width="32" height="32"/>
+        <image name="map_pin.png" width="32" height="32"/>
+        <image name="map_pin_big.png" width="128" height="128"/>
         <image name="map_pin_big.png" width="128" height="128"/>
         <image name="process.png" width="32" height="32"/>
         <image name="process_big.png" width="128" height="128"/>
-        <image name="pullup.png" width="84" height="17"/>
+        <image name="process_big.png" width="128" height="128"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -3015,10 +3094,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oH3-zz-J1y"/>
-        <segue reference="GFF-GA-gXo"/>
-        <segue reference="OQl-sJ-AjH"/>
-        <segue reference="Bzg-Id-Axg"/>
-        <segue reference="y2y-xH-p3K"/>
+        <segue reference="eay-eD-lYk"/>
+        <segue reference="ubD-Oy-qgh"/>
+        <segue reference="bSv-0x-1yo"/>
+        <segue reference="w1l-Z0-nOs"/>
+        <segue reference="0dX-lV-UUa"/>
     </inferredMetricsTieBreakers>
 </document>
