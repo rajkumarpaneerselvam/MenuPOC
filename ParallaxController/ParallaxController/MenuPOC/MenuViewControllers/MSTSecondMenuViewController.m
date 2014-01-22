@@ -10,7 +10,7 @@
 
 #define LabelTag 101
 //#define MenuTable_Width 320
-#define MenuTable_Height 190
+#define MenuTable_Height 220
 #define Menu_Offset 30
 
 
@@ -61,10 +61,11 @@
     
     // menu list array
     self.menuArray = [[NSMutableArray alloc] initWithObjects:
-                      [NSString stringWithFormat:@"One"],
-                      [NSString stringWithFormat:@"Two"],
-                      [NSString stringWithFormat:@"Three"],
-                      [NSString stringWithFormat:@"Four"],
+                      [NSString stringWithFormat:@"Code Scan"],
+                      [NSString stringWithFormat:@"CreditCard"],
+                      [NSString stringWithFormat:@"Email"],
+                      [NSString stringWithFormat:@"Locations"],
+                      [NSString stringWithFormat:@"Settings"],
                       nil];
     
     
@@ -194,6 +195,7 @@
     
     // call Re-Order action
     [self startReorderAction:indexPath];
+    
     
 }
 
