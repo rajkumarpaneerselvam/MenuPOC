@@ -13,4 +13,6 @@
     UITableView *contentTableView;
 }
 
+- (void)UpdateWithImage:(UIImage *)img colorCode:(UIColor *)color titleText:(NSString *)tittle;
+
 @end

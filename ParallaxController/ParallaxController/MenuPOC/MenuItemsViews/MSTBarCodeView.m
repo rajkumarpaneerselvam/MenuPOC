@@ -45,5 +45,11 @@
     
 }
 
+- (void)UpdateWithImage:(UIImage *)img colorCode:(UIColor *)color titleText:(NSString *)tittle {
+    [menuIndicatorImageView setImage:img];
+    [contentTableView setBackgroundColor:color];
+    
+}
+
 
 @end
