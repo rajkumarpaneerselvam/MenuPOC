@@ -7,6 +7,7 @@
 //
 
 #import "MSTMapView.h"
+#import "MapKit/MapKit.h"
 
 @implementation MSTMapView
 
@@ -31,18 +32,18 @@
 
 - (void)initilaizeSetup{
     
-    self.backgroundColor = [UIColor whiteColor];
+    [self setBackgroundColor:[UIColor lightGrayColor]];
     
-    menuIndicatorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 128, 128)];
-    [menuIndicatorImageView setCenter:CGPointMake(self.frame.size.width/2, 65)];
-    [menuIndicatorImageView setImage:[UIImage imageNamed:@"map_pin_big.png"]];
-    [self addSubview:menuIndicatorImageView];
+    MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 50, self.frame.size.width, self.frame.size.height-100)];
+    [self addSubview:mapView];
     
-    contentTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 130, self.frame.size.width, self.frame.size.height-130)];
-    [contentTableView setBackgroundColor:[UIColor whiteColor]];
-    [contentTableView setRowHeight:30];
-    [self addSubview:contentTableView];
+    CLLocationCoordinate2D coord = {.latitude =  40.1480005316257, .longitude =  -82.9909833087205};
+    MKCoordinateSpan span = {.latitudeDelta =  0.2, .longitudeDelta =  0.2};
+    MKCoordinateRegion region = {coord, span};
+
+    [mapView setRegion:region];
     
+
 }
 
 @end

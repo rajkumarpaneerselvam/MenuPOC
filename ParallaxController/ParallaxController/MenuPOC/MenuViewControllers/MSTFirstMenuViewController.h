@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MSTCustomButton.h"
+#import "FXBlurView.h"
 
 @interface MSTFirstMenuViewController : UIViewController {
     BOOL ismenuOpen;
     int numberOfButton;
 }
 
-@property (nonatomic,retain) IBOutlet UIView *menuView;
+@property (nonatomic,retain) IBOutlet FXBlurView *menuView;
 @property (nonatomic,retain) IBOutlet UIButton *button;
 @property (nonatomic,retain) IBOutlet UIButton *backButton;
 @property (nonatomic, retain) IBOutlet UIView *swipeUpView;
@@ -26,7 +27,6 @@
 @property (nonatomic,retain) IBOutlet MSTCustomButton *stmtButton;
 @property (nonatomic,retain) IBOutlet MSTCustomButton *settingsButton;
 @property (nonatomic,retain) IBOutlet UIImageView *bgView;
-
 
 
 @property (nonatomic, retain) IBOutlet UILabel *titleLbl;

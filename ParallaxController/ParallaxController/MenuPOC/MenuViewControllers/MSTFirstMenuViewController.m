@@ -74,7 +74,7 @@
     
     
     [self beautifyComponents];
-    
+    [self rearrangeUIElements];
 }
 
 - (void) handleSwipeUp:(UISwipeGestureRecognizer *) sender {
@@ -251,7 +251,7 @@
     [self.view addSubview:button];
  
 
-    menuView = [[UIView alloc] initWithFrame:CGRectMake( 57,380,200,150)];
+    menuView = [[FXBlurView alloc] initWithFrame:CGRectMake( 57,380,200,150)];
     [menuView.layer setCornerRadius:8.0f];
     
 
@@ -327,6 +327,8 @@
     [menuView.layer setCornerRadius:8.0f];
     ismenuOpen = NO;
     
+    [bgView.layer setCornerRadius:8.0f];
+    
     [myAccButton.layer setBorderWidth:.5f];
     [myAccButton.layer setBorderColor:[[UIColor lightGrayColor] CGColor]];
     
@@ -387,6 +389,16 @@
     [self.view bringSubviewToFront:menuView];
 }
 
+
+- (void)rearrangeUIElements {
+    
+    if ([[UIScreen mainScreen] bounds].size.height == 480) {
+     
+        menuView.frame = CGRectMake(57,290,200,150);
+        button.frame = CGRectMake(129, 440, 56, 30);
+        
+    }
+}
 
 
 @end

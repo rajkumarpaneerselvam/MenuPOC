@@ -11,6 +11,7 @@
 @interface MSTMapView : UIView{
     UIImageView *menuIndicatorImageView;
     UITableView *contentTableView;
+
 }
 
 @end
