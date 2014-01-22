@@ -15,9 +15,22 @@
 #import "MSTFirstMenuMapViewController.h"
 #import "MSTFirstMenuSettingsViewController.h"
 #import "MSTCustomButton.h"
+#import "MSTBarCodeView.h"
+#import "MSTCredicardView.h"
+#import "MSTmailView.h"
+#import "MSTMapView.h"
+#import "MSTSettingsView.h"
 
 
-@interface MSTFirstMenuViewController ()
+
+@interface MSTFirstMenuViewController () {
+    MSTBarCodeView *barcodeView;
+    MSTCredicardView *creditCardView;
+    MSTmailView *mailView;
+    MSTMapView *mapView;
+    MSTSettingsView *settingsView;
+
+}
 
 @end
 
@@ -27,7 +40,7 @@
 @synthesize myProButton;
 @synthesize transButton;
 @synthesize stmtButton;
-@synthesize dragMenuView;
+@synthesize swipeUpView;
 @synthesize settingsButton;
 @synthesize bgView;
 
@@ -45,19 +58,43 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
+    swipeUpView = [[UIView alloc] initWithFrame:CGRectMake(30, 520, 70, 50)];
+    [swipeUpView setBackgroundColor:[UIColor lightGrayColor]];
+
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipedown:)];
+    swipe.direction = UISwipeGestureRecognizerDirectionDown | UISwipeGestureRecognizerDirectionUp;
+    [swipeUpView addGestureRecognizer:swipe];
+
+//    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeUp:)];
+//    swipe.direction = UISwipeGestureRecognizerDirectionUp;
+//    [swipeUpView addGestureRecognizer:swipeUp];
+
     
-//    MSTCustomButton *custBut = [[MSTCustomButton alloc] initWithFrame:CGRectMake(50, 100, 50, 50)];
-//    [custBut setImage:[UIImage imageNamed:@"barcode.png"] forState:UIControlStateNormal];
-//    [custBut setTitle:@"Test" forState:UIControlStateNormal];
-//    [custBut setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-//    [self.view addSubview:custBut];
+//    [self.view addSubview:swipeUpView];
     
     
     [self beautifyComponents];
     
 }
+
+- (void) handleSwipeUp:(UISwipeGestureRecognizer *) sender {
+    NSLog(@"Swipe Up is called ========");
+
+}
+
+- (void) handleSwipedown:(UISwipeGestureRecognizer *) sender {
+  
+    if ( sender.direction | UISwipeGestureRecognizerDirectionDown )
+        NSLog(@" *** SWIPE DOWN ***");
+    if ( sender.direction | UISwipeGestureRecognizerDirectionUp )
+        NSLog(@" *** SWIPE UP ***");
+    
+    NSLog(@"Swipe down is called ========");
+}
+
+
 - (IBAction)onClickBackbutton:(id)sender {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self dismissViewControllerAnimated:NO completion:nil];
         
 }
 
@@ -95,32 +132,73 @@
 
 - (IBAction)onClickMenuFeatures:(id)sender {
 
-    [self onClickMenuButton:nil];
+//    [self onClickMenuButton:nil];
     switch ([sender tag]) {
         case 1: {
-            MSTMyAccViewController *viewCtrl = (MSTMyAccViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTMyAccViewController"];
-            [self presentViewController:viewCtrl  animated:YES completion:nil];
+            
+            if(!barcodeView){
+                barcodeView = [[MSTBarCodeView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:barcodeView];
+            }
+            
+            [self animateViewLefttoRight:barcodeView];
+            
+            
+            
+//            MSTMyAccViewController *viewCtrl = (MSTMyAccViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTMyAccViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 2: {
 
-            MSTFirstMenuCreditCardViewController *viewCtrl = (MSTFirstMenuCreditCardViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuCreditCardViewController"];
-            [self presentViewController:viewCtrl  animated:YES completion:nil];
+            if(!creditCardView){
+                creditCardView = [[MSTCredicardView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:creditCardView];
+            }
+            [self animateViewRighttoLeft:creditCardView];
+            
+            
+//            MSTFirstMenuCreditCardViewController *viewCtrl = (MSTFirstMenuCreditCardViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuCreditCardViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 3: {
-            MSTFirstMenuMailViewController *viewCtrl = (MSTFirstMenuMailViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMailViewController"];
-            [self presentViewController:viewCtrl  animated:YES completion:nil];
+            
+            if(!mailView){
+                mailView = [[MSTmailView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:mailView];
+            }
+            
+            [self animateViewLefttoRight:mailView];
+            
+//            MSTFirstMenuMailViewController *viewCtrl = (MSTFirstMenuMailViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMailViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 4: {
-            MSTFirstMenuMapViewController *viewCtrl = (MSTFirstMenuMapViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMapViewController"];
-            [self presentViewController:viewCtrl  animated:YES completion:nil];
+            if(!mapView){
+                mapView = [[MSTMapView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:mapView];
+            }
+            
+            [self animateViewRighttoLeft:mapView];
+
+//            MSTFirstMenuMapViewController *viewCtrl = (MSTFirstMenuMapViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMapViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 5: {
-            MSTFirstMenuSettingsViewController *viewCtrl = (MSTFirstMenuSettingsViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuSettingsViewController"];
-            [self presentViewController:viewCtrl  animated:YES completion:nil];
+            
+            if(!settingsView){
+                settingsView = [[MSTSettingsView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                [self.view addSubview:settingsView];
+            }
+            
+            [self animateViewBottomToTop:settingsView];
+
+
+//            MSTFirstMenuSettingsViewController *viewCtrl = (MSTFirstMenuSettingsViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuSettingsViewController"];
+//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
             
@@ -156,7 +234,6 @@
     [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [[backButton titleLabel] setFont:[UIFont systemFontOfSize:15.0f]];
     [backButton addTarget:self action:@selector(onClickBackbutton:) forControlEvents:UIControlEventTouchUpInside];
-//    [backButton.titleLabel setTextColor:[UIColor colorWithRed:0.000000 green:0.478431 blue:1.000000 alpha:1.000000]];
     [backButton setTitleColor:[UIColor colorWithRed:0.000000 green:0.478431 blue:1.000000 alpha:1.000000] forState:UIControlStateNormal];
 
     [self.view addSubview:backButton];
@@ -165,9 +242,6 @@
     [titleLbl setText:title];
     [self.view addSubview:titleLbl];
 
-    
-    
-    
     
     button = [[UIButton alloc] initWithFrame:CGRectMake(129, 535, 56, 30)];
     [button setTitle:@"Menu" forState:UIControlStateNormal];
@@ -235,14 +309,8 @@
     [settingsButton setImage:[UIImage imageNamed:@"process.png"] forState:UIControlStateNormal];
     [settingsButton setTitle:@"Settings" forState:UIControlStateNormal];
     [[settingsButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
-
     [settingsButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
     [menuView addSubview:settingsButton];
-    
-    
-    
-//    dragMenuView = [[UIView alloc]  initWithFrame:CGRectMake(80, 537, 150, 31)];
-
     
     [self.view addSubview:menuView];
     [menuView setHidden:YES];
@@ -279,6 +347,46 @@
     
 
 }
+
+
+
+- (void)animateViewRighttoLeft:(UIView *)viewRef{
+    
+    [viewRef setFrame:CGRectMake(320, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [viewRef setFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+        
+    }];
+    [self.view bringSubviewToFront:viewRef];
+    [self.view bringSubviewToFront:menuView];
+}
+
+- (void)animateViewLefttoRight:(UIView *)viewRef{
+    
+    [viewRef setFrame:CGRectMake(-320, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [viewRef setFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+        
+    }];
+    [self.view bringSubviewToFront:viewRef];
+    [self.view bringSubviewToFront:menuView];
+}
+
+
+- (void)animateViewBottomToTop:(UIView *)viewRef{
+    
+    [viewRef setFrame:CGRectMake(0, self.view.frame.size.height-100, self.view.frame.size.width, self.view.frame.size.height-100)];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [viewRef setFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+        
+    }];
+    [self.view bringSubviewToFront:viewRef];
+    [self.view bringSubviewToFront:menuView];
+}
+
 
 
 @end
