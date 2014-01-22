@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface MSTSecondMenuViewController : UIViewController <UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface MSTSecondMenuViewController : UIViewController <UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate> {
     
 }
 
