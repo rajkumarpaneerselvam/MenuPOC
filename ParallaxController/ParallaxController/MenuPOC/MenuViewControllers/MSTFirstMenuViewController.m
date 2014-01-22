@@ -9,11 +9,6 @@
 #import "MSTFirstMenuViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "UIView+Genie.h"
-#import "MSTMyAccViewController.h"
-#import "MSTFirstMenuCreditCardViewController.h"
-#import "MSTFirstMenuMailViewController.h"
-#import "MSTFirstMenuMapViewController.h"
-#import "MSTFirstMenuSettingsViewController.h"
 #import "MSTCustomButton.h"
 #import "MSTBarCodeView.h"
 #import "MSTCredicardView.h"
