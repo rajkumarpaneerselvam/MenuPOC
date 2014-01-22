@@ -10,7 +10,6 @@
 		4DA3F7C318897F45000AFB02 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA3F7C218897F45000AFB02 /* MessageUI.framework */; };
 		4DA3F7C518899E80000AFB02 /* chaseLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DA3F7C418899E80000AFB02 /* chaseLogo.png */; };
 		4DA3F7C71889A4CB000AFB02 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DA3F7C61889A4CB000AFB02 /* MapKit.framework */; };
-		4DA3F7CC1889BEAD000AFB02 /* MSTSecondMenuMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3F7CA1889BEAD000AFB02 /* MSTSecondMenuMapViewController.m */; };
 		BE8DAD631883587400CCF2DB /* MSTSlideUpMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8DAD621883587400CCF2DB /* MSTSlideUpMenuViewController.m */; };
 		BE8DAD6618835B2600CCF2DB /* MSTMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8DAD6518835B2600CCF2DB /* MSTMenuViewController.m */; };
 		BE8FAD74188373A900EC5F84 /* MSTUIViewClickPassthrough.m in Sources */ = {isa = PBXBuildFile; fileRef = BE8FAD73188373A900EC5F84 /* MSTUIViewClickPassthrough.m */; };
@@ -33,16 +32,12 @@
 		BEA203311877AA400039B2F7 /* amazing-gerbera-flower-wallpaper-wide-full-hd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BEA203301877AA400039B2F7 /* amazing-gerbera-flower-wallpaper-wide-full-hd.jpg */; };
 		BEA203341877AB6C0039B2F7 /* MSTImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA203331877AB6C0039B2F7 /* MSTImageViewController.m */; };
 		BEA203371877AC5A0039B2F7 /* MSTParallaxController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA203361877AC5A0039B2F7 /* MSTParallaxController.m */; };
-		EA03580F188998F7002EA17A /* MSTFirstMenuCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA03580E188998F7002EA17A /* MSTFirstMenuCreditCardViewController.m */; };
-		EA03581518899934002EA17A /* MSTFirstMenuMailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA03581418899934002EA17A /* MSTFirstMenuMailViewController.m */; };
-		EA03581818899953002EA17A /* MSTFirstMenuMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA03581718899953002EA17A /* MSTFirstMenuMapViewController.m */; };
-		EA03581B1889997D002EA17A /* MSTFirstMenuSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA03581A1889997D002EA17A /* MSTFirstMenuSettingsViewController.m */; };
 		EA03581F18899FB7002EA17A /* MSTCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA03581E18899FB7002EA17A /* MSTCustomButton.m */; };
 		EA38D73B1889CD7B0074E328 /* dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = EA38D73A1889CD7B0074E328 /* dropdown.png */; };
 		EA38D73D1889CD830074E328 /* pullup.png in Resources */ = {isa = PBXBuildFile; fileRef = EA38D73C1889CD830074E328 /* pullup.png */; };
 		EACE18AB188586D2006480A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACE18AA188586D2006480A6 /* QuartzCore.framework */; };
-		EACE18B3188979C4006480A6 /* dashboardbg.png in Resources */ = {isa = PBXBuildFile; fileRef = EACE18B2188979C4006480A6 /* dashboardbg.png */; };
 		EAEB7DF318900D7A00D70D2C /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB7DF218900D7A00D70D2C /* FXBlurView.m */; };
+		EE155A7618904A9D005F9EE8 /* MSTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE155A7518904A9D005F9EE8 /* MSTMainViewController.m */; };
 		EE270DCD188EE9B10002B900 /* MSTBarCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCC188EE9B10002B900 /* MSTBarCodeView.m */; };
 		EE270DD0188EE9CE0002B900 /* MSTCredicardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCF188EE9CE0002B900 /* MSTCredicardView.m */; };
 		EE270DD3188EE9E20002B900 /* MSTmailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DD2188EE9E20002B900 /* MSTmailView.m */; };
@@ -51,10 +46,6 @@
 		EEC212D41888E59E005FE7B4 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A11888E59E005FE7B4 /* barcode.png */; };
 		EEC212D51888E59E005FE7B4 /* barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A21888E59E005FE7B4 /* barcode@2x.png */; };
 		EEC212D61888E59E005FE7B4 /* barcode_big.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A31888E59E005FE7B4 /* barcode_big.png */; };
-		EEC212D71888E59E005FE7B4 /* bg-addbutton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A41888E59E005FE7B4 /* bg-addbutton-highlighted.png */; };
-		EEC212D81888E59E005FE7B4 /* bg-addbutton-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A51888E59E005FE7B4 /* bg-addbutton-highlighted@2x.png */; };
-		EEC212D91888E59E005FE7B4 /* bg-addbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A61888E59E005FE7B4 /* bg-addbutton.png */; };
-		EEC212DA1888E59E005FE7B4 /* bg-addbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A71888E59E005FE7B4 /* bg-addbutton@2x.png */; };
 		EEC212DB1888E59E005FE7B4 /* bg-menuitem-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A81888E59E005FE7B4 /* bg-menuitem-highlighted.png */; };
 		EEC212DC1888E59E005FE7B4 /* bg-menuitem-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212A91888E59E005FE7B4 /* bg-menuitem-highlighted@2x.png */; };
 		EEC212DD1888E59E005FE7B4 /* bg-menuitem.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212AA1888E59E005FE7B4 /* bg-menuitem.png */; };
@@ -77,21 +68,10 @@
 		EEC212EE1888E59E005FE7B4 /* process.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212BB1888E59E005FE7B4 /* process.png */; };
 		EEC212EF1888E59E005FE7B4 /* process@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212BC1888E59E005FE7B4 /* process@2x.png */; };
 		EEC212F01888E59E005FE7B4 /* process_big.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212BD1888E59E005FE7B4 /* process_big.png */; };
-		EEC212F11888E59E005FE7B4 /* MSTBarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212C01888E59E005FE7B4 /* MSTBarCodeViewController.m */; };
-		EEC212F21888E59E005FE7B4 /* MSTCreditCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212C21888E59E005FE7B4 /* MSTCreditCardViewController.m */; };
-		EEC212F31888E59E005FE7B4 /* MSTMailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212C41888E59E005FE7B4 /* MSTMailViewController.m */; };
-		EEC212F41888E59E005FE7B4 /* MSTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212C61888E59E005FE7B4 /* MSTMainViewController.m */; };
-		EEC212F51888E59E005FE7B4 /* MSTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212C81888E59E005FE7B4 /* MSTMapViewController.m */; };
-		EEC212F61888E59E005FE7B4 /* MSTMyAccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212CA1888E59E005FE7B4 /* MSTMyAccViewController.m */; };
-		EEC212F71888E59E005FE7B4 /* MSTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212CC1888E59E005FE7B4 /* MSTSettingsViewController.m */; };
 		EEC212F81888E59E005FE7B4 /* MSTFirstMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212CF1888E59E005FE7B4 /* MSTFirstMenuViewController.m */; };
 		EEC212F91888E59E005FE7B4 /* MSTSecondMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212D11888E59E005FE7B4 /* MSTSecondMenuViewController.m */; };
 		EEC212FA1888E59E005FE7B4 /* MSTThirdMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212D31888E59E005FE7B4 /* MSTThirdMenuViewController.m */; };
 		EEC212FE1888E5BD005FE7B4 /* UIView+Genie.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC212FD1888E5BD005FE7B4 /* UIView+Genie.m */; };
-		EEC213001888EBF8005FE7B4 /* Menu1BG.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC212FF1888EBF8005FE7B4 /* Menu1BG.png */; };
-		EEC213021888EE97005FE7B4 /* Menu1B.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC213011888EE97005FE7B4 /* Menu1B.png */; };
-		EEC213041888F01B005FE7B4 /* Menu1B_2.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC213031888F01B005FE7B4 /* Menu1B_2.png */; };
-		EEC213061888F6ED005FE7B4 /* BoxyCall.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC213051888F6ED005FE7B4 /* BoxyCall.png */; };
 		EECF7C421884CB9B004770CD /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */; };
 		EECF7C431884CB9B004770CD /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EECF7C411884CB9B004770CD /* AwesomeMenuItem.m */; };
 /* End PBXBuildFile section */
@@ -110,8 +90,6 @@
 		4DA3F7C218897F45000AFB02 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		4DA3F7C418899E80000AFB02 /* chaseLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chaseLogo.png; sourceTree = "<group>"; };
 		4DA3F7C61889A4CB000AFB02 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		4DA3F7C91889BEAD000AFB02 /* MSTSecondMenuMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTSecondMenuMapViewController.h; path = SecondMenu/MSTSecondMenuMapViewController.h; sourceTree = "<group>"; };
-		4DA3F7CA1889BEAD000AFB02 /* MSTSecondMenuMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTSecondMenuMapViewController.m; path = SecondMenu/MSTSecondMenuMapViewController.m; sourceTree = "<group>"; };
 		BE8DAD611883587400CCF2DB /* MSTSlideUpMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTSlideUpMenuViewController.h; sourceTree = "<group>"; };
 		BE8DAD621883587400CCF2DB /* MSTSlideUpMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTSlideUpMenuViewController.m; sourceTree = "<group>"; };
 		BE8DAD6418835B2600CCF2DB /* MSTMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTMenuViewController.h; sourceTree = "<group>"; };
@@ -146,22 +124,15 @@
 		BEA203331877AB6C0039B2F7 /* MSTImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTImageViewController.m; sourceTree = "<group>"; };
 		BEA203351877AC5A0039B2F7 /* MSTParallaxController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTParallaxController.h; sourceTree = "<group>"; };
 		BEA203361877AC5A0039B2F7 /* MSTParallaxController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTParallaxController.m; sourceTree = "<group>"; };
-		EA03580D188998F7002EA17A /* MSTFirstMenuCreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTFirstMenuCreditCardViewController.h; sourceTree = "<group>"; };
-		EA03580E188998F7002EA17A /* MSTFirstMenuCreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTFirstMenuCreditCardViewController.m; sourceTree = "<group>"; };
-		EA03581318899934002EA17A /* MSTFirstMenuMailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTFirstMenuMailViewController.h; sourceTree = "<group>"; };
-		EA03581418899934002EA17A /* MSTFirstMenuMailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTFirstMenuMailViewController.m; sourceTree = "<group>"; };
-		EA03581618899953002EA17A /* MSTFirstMenuMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTFirstMenuMapViewController.h; sourceTree = "<group>"; };
-		EA03581718899953002EA17A /* MSTFirstMenuMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTFirstMenuMapViewController.m; sourceTree = "<group>"; };
-		EA0358191889997D002EA17A /* MSTFirstMenuSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTFirstMenuSettingsViewController.h; sourceTree = "<group>"; };
-		EA03581A1889997D002EA17A /* MSTFirstMenuSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTFirstMenuSettingsViewController.m; sourceTree = "<group>"; };
 		EA03581D18899FB7002EA17A /* MSTCustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSTCustomButton.h; path = CustomButton/MSTCustomButton.h; sourceTree = "<group>"; };
 		EA03581E18899FB7002EA17A /* MSTCustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSTCustomButton.m; path = CustomButton/MSTCustomButton.m; sourceTree = "<group>"; };
 		EA38D73A1889CD7B0074E328 /* dropdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dropdown.png; sourceTree = "<group>"; };
 		EA38D73C1889CD830074E328 /* pullup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullup.png; sourceTree = "<group>"; };
 		EACE18AA188586D2006480A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		EACE18B2188979C4006480A6 /* dashboardbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboardbg.png; sourceTree = "<group>"; };
 		EAEB7DF118900D7A00D70D2C /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		EAEB7DF218900D7A00D70D2C /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		EE155A7418904A9D005F9EE8 /* MSTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTMainViewController.h; sourceTree = "<group>"; };
+		EE155A7518904A9D005F9EE8 /* MSTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTMainViewController.m; sourceTree = "<group>"; };
 		EE270DCB188EE9B10002B900 /* MSTBarCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTBarCodeView.h; sourceTree = "<group>"; };
 		EE270DCC188EE9B10002B900 /* MSTBarCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTBarCodeView.m; sourceTree = "<group>"; };
 		EE270DCE188EE9CE0002B900 /* MSTCredicardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTCredicardView.h; sourceTree = "<group>"; };
@@ -175,10 +146,6 @@
 		EEC212A11888E59E005FE7B4 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 		EEC212A21888E59E005FE7B4 /* barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barcode@2x.png"; sourceTree = "<group>"; };
 		EEC212A31888E59E005FE7B4 /* barcode_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode_big.png; sourceTree = "<group>"; };
-		EEC212A41888E59E005FE7B4 /* bg-addbutton-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton-highlighted.png"; sourceTree = "<group>"; };
-		EEC212A51888E59E005FE7B4 /* bg-addbutton-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton-highlighted@2x.png"; sourceTree = "<group>"; };
-		EEC212A61888E59E005FE7B4 /* bg-addbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton.png"; sourceTree = "<group>"; };
-		EEC212A71888E59E005FE7B4 /* bg-addbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-addbutton@2x.png"; sourceTree = "<group>"; };
 		EEC212A81888E59E005FE7B4 /* bg-menuitem-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem-highlighted.png"; sourceTree = "<group>"; };
 		EEC212A91888E59E005FE7B4 /* bg-menuitem-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem-highlighted@2x.png"; sourceTree = "<group>"; };
 		EEC212AA1888E59E005FE7B4 /* bg-menuitem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-menuitem.png"; sourceTree = "<group>"; };
@@ -201,20 +168,6 @@
 		EEC212BB1888E59E005FE7B4 /* process.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = process.png; sourceTree = "<group>"; };
 		EEC212BC1888E59E005FE7B4 /* process@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "process@2x.png"; sourceTree = "<group>"; };
 		EEC212BD1888E59E005FE7B4 /* process_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = process_big.png; sourceTree = "<group>"; };
-		EEC212BF1888E59E005FE7B4 /* MSTBarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTBarCodeViewController.h; sourceTree = "<group>"; };
-		EEC212C01888E59E005FE7B4 /* MSTBarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTBarCodeViewController.m; sourceTree = "<group>"; };
-		EEC212C11888E59E005FE7B4 /* MSTCreditCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTCreditCardViewController.h; sourceTree = "<group>"; };
-		EEC212C21888E59E005FE7B4 /* MSTCreditCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTCreditCardViewController.m; sourceTree = "<group>"; };
-		EEC212C31888E59E005FE7B4 /* MSTMailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTMailViewController.h; sourceTree = "<group>"; };
-		EEC212C41888E59E005FE7B4 /* MSTMailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTMailViewController.m; sourceTree = "<group>"; };
-		EEC212C51888E59E005FE7B4 /* MSTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTMainViewController.h; sourceTree = "<group>"; };
-		EEC212C61888E59E005FE7B4 /* MSTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTMainViewController.m; sourceTree = "<group>"; };
-		EEC212C71888E59E005FE7B4 /* MSTMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTMapViewController.h; sourceTree = "<group>"; };
-		EEC212C81888E59E005FE7B4 /* MSTMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTMapViewController.m; sourceTree = "<group>"; };
-		EEC212C91888E59E005FE7B4 /* MSTMyAccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTMyAccViewController.h; sourceTree = "<group>"; };
-		EEC212CA1888E59E005FE7B4 /* MSTMyAccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTMyAccViewController.m; sourceTree = "<group>"; };
-		EEC212CB1888E59E005FE7B4 /* MSTSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTSettingsViewController.h; sourceTree = "<group>"; };
-		EEC212CC1888E59E005FE7B4 /* MSTSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTSettingsViewController.m; sourceTree = "<group>"; };
 		EEC212CE1888E59E005FE7B4 /* MSTFirstMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTFirstMenuViewController.h; sourceTree = "<group>"; };
 		EEC212CF1888E59E005FE7B4 /* MSTFirstMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTFirstMenuViewController.m; sourceTree = "<group>"; };
 		EEC212D01888E59E005FE7B4 /* MSTSecondMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTSecondMenuViewController.h; sourceTree = "<group>"; };
@@ -223,10 +176,6 @@
 		EEC212D31888E59E005FE7B4 /* MSTThirdMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTThirdMenuViewController.m; sourceTree = "<group>"; };
 		EEC212FC1888E5BD005FE7B4 /* UIView+Genie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Genie.h"; sourceTree = "<group>"; };
 		EEC212FD1888E5BD005FE7B4 /* UIView+Genie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Genie.m"; sourceTree = "<group>"; };
-		EEC212FF1888EBF8005FE7B4 /* Menu1BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu1BG.png; sourceTree = "<group>"; };
-		EEC213011888EE97005FE7B4 /* Menu1B.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu1B.png; sourceTree = "<group>"; };
-		EEC213031888F01B005FE7B4 /* Menu1B_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu1B_2.png; sourceTree = "<group>"; };
-		EEC213051888F6ED005FE7B4 /* BoxyCall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoxyCall.png; sourceTree = "<group>"; };
 		EECF7C3E1884CB9B004770CD /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
 		EECF7C3F1884CB9B004770CD /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
 		EECF7C401884CB9B004770CD /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
@@ -260,15 +209,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4DA3F7C81889BE24000AFB02 /* SecondMenuDetails */ = {
-			isa = PBXGroup;
-			children = (
-				4DA3F7C91889BEAD000AFB02 /* MSTSecondMenuMapViewController.h */,
-				4DA3F7CA1889BEAD000AFB02 /* MSTSecondMenuMapViewController.m */,
-			);
-			name = SecondMenuDetails;
-			sourceTree = "<group>";
-		};
 		BEA202E91877A71D0039B2F7 = {
 			isa = PBXGroup;
 			children = (
@@ -375,7 +315,6 @@
 			children = (
 				EE270DCA188EE9B10002B900 /* MenuItemsViews */,
 				EEC212A01888E59E005FE7B4 /* Images */,
-				EEC212BE1888E59E005FE7B4 /* MenuItemsViewControllers */,
 				EEC212CD1888E59E005FE7B4 /* MenuViewControllers */,
 				EECF7C3C1884CB9B004770CD /* UIComponents */,
 			);
@@ -414,19 +353,10 @@
 			children = (
 				EA38D73C1889CD830074E328 /* pullup.png */,
 				EA38D73A1889CD7B0074E328 /* dropdown.png */,
-				EACE18B2188979C4006480A6 /* dashboardbg.png */,
-				EEC213051888F6ED005FE7B4 /* BoxyCall.png */,
 				4DA3F7C418899E80000AFB02 /* chaseLogo.png */,
-				EEC213031888F01B005FE7B4 /* Menu1B_2.png */,
-				EEC213011888EE97005FE7B4 /* Menu1B.png */,
-				EEC212FF1888EBF8005FE7B4 /* Menu1BG.png */,
 				EEC212A11888E59E005FE7B4 /* barcode.png */,
 				EEC212A21888E59E005FE7B4 /* barcode@2x.png */,
 				EEC212A31888E59E005FE7B4 /* barcode_big.png */,
-				EEC212A41888E59E005FE7B4 /* bg-addbutton-highlighted.png */,
-				EEC212A51888E59E005FE7B4 /* bg-addbutton-highlighted@2x.png */,
-				EEC212A61888E59E005FE7B4 /* bg-addbutton.png */,
-				EEC212A71888E59E005FE7B4 /* bg-addbutton@2x.png */,
 				EEC212A81888E59E005FE7B4 /* bg-menuitem-highlighted.png */,
 				EEC212A91888E59E005FE7B4 /* bg-menuitem-highlighted@2x.png */,
 				EEC212AA1888E59E005FE7B4 /* bg-menuitem.png */,
@@ -454,40 +384,11 @@
 			path = ParallaxController/MenuPOC/Images;
 			sourceTree = "<group>";
 		};
-		EEC212BE1888E59E005FE7B4 /* MenuItemsViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				EEC212BF1888E59E005FE7B4 /* MSTBarCodeViewController.h */,
-				EEC212C01888E59E005FE7B4 /* MSTBarCodeViewController.m */,
-				EEC212C11888E59E005FE7B4 /* MSTCreditCardViewController.h */,
-				EEC212C21888E59E005FE7B4 /* MSTCreditCardViewController.m */,
-				EEC212C31888E59E005FE7B4 /* MSTMailViewController.h */,
-				EEC212C41888E59E005FE7B4 /* MSTMailViewController.m */,
-				EEC212C51888E59E005FE7B4 /* MSTMainViewController.h */,
-				EEC212C61888E59E005FE7B4 /* MSTMainViewController.m */,
-				EEC212C71888E59E005FE7B4 /* MSTMapViewController.h */,
-				EEC212C81888E59E005FE7B4 /* MSTMapViewController.m */,
-				EEC212C91888E59E005FE7B4 /* MSTMyAccViewController.h */,
-				EEC212CA1888E59E005FE7B4 /* MSTMyAccViewController.m */,
-				EEC212CB1888E59E005FE7B4 /* MSTSettingsViewController.h */,
-				EEC212CC1888E59E005FE7B4 /* MSTSettingsViewController.m */,
-				EA03580D188998F7002EA17A /* MSTFirstMenuCreditCardViewController.h */,
-				EA03580E188998F7002EA17A /* MSTFirstMenuCreditCardViewController.m */,
-				EA03581318899934002EA17A /* MSTFirstMenuMailViewController.h */,
-				EA03581418899934002EA17A /* MSTFirstMenuMailViewController.m */,
-				EA03581618899953002EA17A /* MSTFirstMenuMapViewController.h */,
-				EA03581718899953002EA17A /* MSTFirstMenuMapViewController.m */,
-				EA0358191889997D002EA17A /* MSTFirstMenuSettingsViewController.h */,
-				EA03581A1889997D002EA17A /* MSTFirstMenuSettingsViewController.m */,
-				4DA3F7C81889BE24000AFB02 /* SecondMenuDetails */,
-			);
-			name = MenuItemsViewControllers;
-			path = ParallaxController/MenuPOC/MenuItemsViewControllers;
-			sourceTree = "<group>";
-		};
 		EEC212CD1888E59E005FE7B4 /* MenuViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				EE155A7418904A9D005F9EE8 /* MSTMainViewController.h */,
+				EE155A7518904A9D005F9EE8 /* MSTMainViewController.m */,
 				EEC212CE1888E59E005FE7B4 /* MSTFirstMenuViewController.h */,
 				EEC212CF1888E59E005FE7B4 /* MSTFirstMenuViewController.m */,
 				EEC212D01888E59E005FE7B4 /* MSTSecondMenuViewController.h */,
@@ -614,8 +515,6 @@
 				4DA3F7C518899E80000AFB02 /* chaseLogo.png in Resources */,
 				EEC212DF1888E59E005FE7B4 /* credit_card.png in Resources */,
 				EEC212E11888E59E005FE7B4 /* credit_card_big.png in Resources */,
-				EACE18B3188979C4006480A6 /* dashboardbg.png in Resources */,
-				EEC212D81888E59E005FE7B4 /* bg-addbutton-highlighted@2x.png in Resources */,
 				EEC212EB1888E59E005FE7B4 /* map_pin.png in Resources */,
 				EEC212ED1888E59E005FE7B4 /* map_pin_big.png in Resources */,
 				EEC212DC1888E59E005FE7B4 /* bg-menuitem-highlighted@2x.png in Resources */,
@@ -623,9 +522,6 @@
 				EEC212EE1888E59E005FE7B4 /* process.png in Resources */,
 				EEC212E41888E59E005FE7B4 /* icon-plus.png in Resources */,
 				EEC212EC1888E59E005FE7B4 /* map_pin@2x.png in Resources */,
-				EEC212D71888E59E005FE7B4 /* bg-addbutton-highlighted.png in Resources */,
-				EEC213021888EE97005FE7B4 /* Menu1B.png in Resources */,
-				EEC213061888F6ED005FE7B4 /* BoxyCall.png in Resources */,
 				EEC212E71888E59E005FE7B4 /* icon-star@2x.png in Resources */,
 				EEC212DE1888E59E005FE7B4 /* bg-menuitem@2x.png in Resources */,
 				EA38D73B1889CD7B0074E328 /* dropdown.png in Resources */,
@@ -637,16 +533,12 @@
 				BEA2030E1877A71D0039B2F7 /* Images.xcassets in Resources */,
 				EEC212E51888E59E005FE7B4 /* icon-plus@2x.png in Resources */,
 				BEA203001877A71D0039B2F7 /* InfoPlist.strings in Resources */,
-				EEC213041888F01B005FE7B4 /* Menu1B_2.png in Resources */,
 				EEC212E61888E59E005FE7B4 /* icon-star.png in Resources */,
-				EEC212DA1888E59E005FE7B4 /* bg-addbutton@2x.png in Resources */,
-				EEC213001888EBF8005FE7B4 /* Menu1BG.png in Resources */,
 				EEC212EF1888E59E005FE7B4 /* process@2x.png in Resources */,
 				EEC212D51888E59E005FE7B4 /* barcode@2x.png in Resources */,
 				EEC212DD1888E59E005FE7B4 /* bg-menuitem.png in Resources */,
 				EEC212D41888E59E005FE7B4 /* barcode.png in Resources */,
 				EEC212E31888E59E005FE7B4 /* icon-plus-highlighted@2x.png in Resources */,
-				EEC212D91888E59E005FE7B4 /* bg-addbutton.png in Resources */,
 				BEA203091877A71D0039B2F7 /* Main.storyboard in Resources */,
 				EEC212E91888E59E005FE7B4 /* mail@2x.png in Resources */,
 			);
@@ -667,16 +559,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC212F21888E59E005FE7B4 /* MSTCreditCardViewController.m in Sources */,
-				EEC212F61888E59E005FE7B4 /* MSTMyAccViewController.m in Sources */,
 				EAEB7DF318900D7A00D70D2C /* FXBlurView.m in Sources */,
 				EE270DCD188EE9B10002B900 /* MSTBarCodeView.m in Sources */,
 				EECF7C431884CB9B004770CD /* AwesomeMenuItem.m in Sources */,
 				BEA203021877A71D0039B2F7 /* main.m in Sources */,
-				EA03581818899953002EA17A /* MSTFirstMenuMapViewController.m in Sources */,
 				EEC212FA1888E59E005FE7B4 /* MSTThirdMenuViewController.m in Sources */,
 				EEC212F91888E59E005FE7B4 /* MSTSecondMenuViewController.m in Sources */,
-				EEC212F11888E59E005FE7B4 /* MSTBarCodeViewController.m in Sources */,
 				BE8DAD631883587400CCF2DB /* MSTSlideUpMenuViewController.m in Sources */,
 				EE270DD9188EEA040002B900 /* MSTSettingsView.m in Sources */,
 				EEC212F81888E59E005FE7B4 /* MSTFirstMenuViewController.m in Sources */,
@@ -684,24 +572,17 @@
 				EE270DD6188EE9F50002B900 /* MSTMapView.m in Sources */,
 				EA03581F18899FB7002EA17A /* MSTCustomButton.m in Sources */,
 				BE8DAD6618835B2600CCF2DB /* MSTMenuViewController.m in Sources */,
-				EEC212F31888E59E005FE7B4 /* MSTMailViewController.m in Sources */,
 				BEA203061877A71D0039B2F7 /* MSTAppDelegate.m in Sources */,
 				BEA2032F1877A8970039B2F7 /* MSTTableViewController.m in Sources */,
 				BE8FAD7A1883778600EC5F84 /* UIImage+ImageEffects.m in Sources */,
 				BEA203371877AC5A0039B2F7 /* MSTParallaxController.m in Sources */,
-				4DA3F7CC1889BEAD000AFB02 /* MSTSecondMenuMapViewController.m in Sources */,
 				EECF7C421884CB9B004770CD /* AwesomeMenu.m in Sources */,
+				EE155A7618904A9D005F9EE8 /* MSTMainViewController.m in Sources */,
 				EEC212FE1888E5BD005FE7B4 /* UIView+Genie.m in Sources */,
-				EA03581518899934002EA17A /* MSTFirstMenuMailViewController.m in Sources */,
-				EEC212F51888E59E005FE7B4 /* MSTMapViewController.m in Sources */,
 				BEA2030C1877A71D0039B2F7 /* MSTViewController.m in Sources */,
 				EE270DD0188EE9CE0002B900 /* MSTCredicardView.m in Sources */,
 				EE270DD3188EE9E20002B900 /* MSTmailView.m in Sources */,
 				BEA203341877AB6C0039B2F7 /* MSTImageViewController.m in Sources */,
-				EEC212F71888E59E005FE7B4 /* MSTSettingsViewController.m in Sources */,
-				EA03581B1889997D002EA17A /* MSTFirstMenuSettingsViewController.m in Sources */,
-				EA03580F188998F7002EA17A /* MSTFirstMenuCreditCardViewController.m in Sources */,
-				EEC212F41888E59E005FE7B4 /* MSTMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
