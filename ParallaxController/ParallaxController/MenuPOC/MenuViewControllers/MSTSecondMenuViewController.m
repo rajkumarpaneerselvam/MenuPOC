@@ -7,12 +7,19 @@
 //
 
 #import "MSTSecondMenuViewController.h"
+#import "MSTBarCodeView.h"
 
 #define LabelTag 101
 //#define MenuTable_Width 320
 #define MenuTable_Height 220
 #define Menu_Offset 30
 
+@interface  MSTSecondMenuViewController () {
+      MSTBarCodeView *barcodeView;
+      NSMutableArray *logoArray;
+}
+
+@end
 
 @implementation MSTSecondMenuViewController
 @synthesize tapAction = _tapAction;
@@ -35,13 +42,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    if(!barcodeView){
+        barcodeView = [[MSTBarCodeView alloc] initWithFrame:CGRectMake(-500, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+        [self.view addSubview:barcodeView];
+    }
+    
+    
     // set tableview delegate and datasource
     [self.menuTableView setDelegate:self];
     [self.menuTableView setDataSource:self];
     CGRect frame = [UIScreen mainScreen].applicationFrame;
     [self.menuTableView setFrame:CGRectMake(0, frame.origin.y + frame.size.height, frame.size.width,MenuTable_Height)];
+    [self.view addSubview:self.menuTableView];
     
     // initial time setup
+    [barcodeView setHidden:YES];
     [self setIsMenuOpen:NO];
     [self.bgOverlayView setHidden:YES];
     // subviews frames
@@ -51,7 +66,7 @@
     [self.lblTitle setFrame:lblFrame];
     // rounded corner label
     [self.lblTitle.layer setCornerRadius:5.0];
-    
+    [self.view addSubview:self.lblTitle];
     
     // set tap guesture to UILabel
     self.tapGuesture.numberOfTapsRequired = 1;
@@ -67,7 +82,11 @@
                       [NSString stringWithFormat:@"Locations"],
                       [NSString stringWithFormat:@"Settings"],
                       nil];
-    
+    logoArray = [[NSMutableArray alloc] initWithObjects:@"barcode_big",
+                 @"credit_card_big",
+                 @"mail_big",
+                 @"map_pin_big",
+                 @"process_big", nil];
     
 }
 
@@ -193,20 +212,58 @@
     [self.lblTitle setText:[self.menuArray objectAtIndex:indexPath.row]];
     [tableView moveRowAtIndexPath:indexPath toIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     
+    
+    
+    
+    // call content view with animation
+    NSString *file = [[NSBundle mainBundle] pathForResource:[logoArray objectAtIndex:indexPath.row] ofType:@"png"];
+    
+    UIImage *currentImage = [UIImage imageWithContentsOfFile:file];
+    [barcodeView UpdateWithImage:currentImage colorCode:[self getRandomColor] titleText:[logoArray objectAtIndex:indexPath.row]];
+    [self animateMethod:indexPath];
+    
+    
     // call Re-Order action
     [self startReorderAction:indexPath];
+
     
     
 }
+
+-(void)animateMethod:(NSIndexPath *)index
+{
+    [barcodeView setFrame:CGRectMake(-500, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+    [UIView animateWithDuration:0.5
+                               delay:0.0
+                             options:index.row
+                          animations:^{
+                              //moving the cloud across the screen here
+                              [barcodeView setHidden:NO];
+                              [barcodeView setFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+                          }
+                          completion:^(BOOL finished) {
+                              if (finished) {
+                                  NSLog(@"Done!");
+                                  //[self animateMethod];
+                              }
+                          }];
+}
+
+
 
 - (void)startReorderAction:(NSIndexPath *)indexPath {
     // swap datasource values
     self.isMenuOpen = YES;
     [self performSelector:@selector(tapAction:) withObject:nil afterDelay:0.6];
     // Re-Order datasource values
-    id object = [self.menuArray objectAtIndex:indexPath.row];
+    id menuObject = [self.menuArray objectAtIndex:indexPath.row];
     [self.menuArray removeObjectAtIndex:indexPath.row];
-    [self.menuArray insertObject:object atIndex:0];
+    [self.menuArray insertObject:menuObject atIndex:0];
+    
+    // re-order logo datasource
+    id logoObject = [logoArray objectAtIndex:indexPath.row];
+    [logoArray removeObjectAtIndex:indexPath.row];
+    [logoArray insertObject:logoObject atIndex:0];
 }
 
 - (IBAction)menuDismissAction:(id)sender {
@@ -222,6 +279,11 @@
     
 }
 
-
+- (UIColor *) getRandomColor {
+    CGFloat hue = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
+    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
+    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;
+    return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+}
 
 @end
