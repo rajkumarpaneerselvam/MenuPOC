@@ -105,7 +105,7 @@
                              [self.bgOverlayView setHidden:YES];
                              
                          } else {
-                             self.menuTableView.frame = CGRectMake(0, (frame.origin.y + frame.size.height) - (frame.origin.y + self.menuTableView.frame.size.height) , frame.size.width, MenuTable_Height);
+                             self.menuTableView.frame = CGRectMake(0, (frame.origin.y + frame.size.height) -  self.menuTableView.frame.size.height , frame.size.width, MenuTable_Height);
                              // Hide overlayview
                              [self.bgOverlayView setHidden:NO];
                          }
@@ -232,7 +232,21 @@
 
 -(void)animateMethod:(NSIndexPath *)index
 {
-    [barcodeView setFrame:CGRectMake(-500, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
+    float x = 0;
+    float y = 50;
+    if (index.row == 0) {
+        x = -500;
+    } else if (index.row == 1) {
+        x = 500;
+    } else if (index.row == 2) {
+        y = - 500;
+    } else if (index.row == 3) {
+        y = 500;
+    } else {
+        x = 200;
+        y = 300;
+    }
+    [barcodeView setFrame:CGRectMake(x, y, self.view.frame.size.width, self.view.frame.size.height-100)];
     [UIView animateWithDuration:0.5
                                delay:0.0
                              options:index.row
