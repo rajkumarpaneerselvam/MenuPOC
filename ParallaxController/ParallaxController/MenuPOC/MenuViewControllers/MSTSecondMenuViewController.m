@@ -219,7 +219,7 @@
     NSString *file = [[NSBundle mainBundle] pathForResource:[logoArray objectAtIndex:indexPath.row] ofType:@"png"];
     
     UIImage *currentImage = [UIImage imageWithContentsOfFile:file];
-    [barcodeView UpdateWithImage:currentImage colorCode:[self getRandomColor] titleText:[logoArray objectAtIndex:indexPath.row]];
+    [barcodeView UpdateWithImage:currentImage colorCode:[self getRandomColor] titleText:[self.menuArray objectAtIndex:indexPath.row]];
     [self animateMethod:indexPath];
     
     
