@@ -31,17 +31,12 @@
 
 - (void)initilaizeSetup{
     
-    self.backgroundColor = [UIColor whiteColor];
+    [self setBackgroundColor:[UIColor lightGrayColor]];
     
-    menuIndicatorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0, 128, 128)];
-    [menuIndicatorImageView setCenter:CGPointMake(self.frame.size.width/2, 65)];
-    [menuIndicatorImageView setImage:[UIImage imageNamed:@"credit_card_big.png"]];
-    [self addSubview:menuIndicatorImageView];
-    
-    contentTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 130, self.frame.size.width, self.frame.size.height-130)];
-    [contentTableView setBackgroundColor:[UIColor grayColor]];
-    [contentTableView setRowHeight:30];
-    [self addSubview:contentTableView];
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 50, self.frame.size.width, self.frame.size.height-50)];
+    [self addSubview:webView];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://mobilebanking.chase.com/"]]];
+    [webView setUserInteractionEnabled:NO];
     
 }
 
