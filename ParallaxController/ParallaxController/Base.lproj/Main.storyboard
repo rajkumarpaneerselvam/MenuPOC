@@ -884,7 +884,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view clipsSubviews="YES" contentMode="scaleToFill" id="bDg-XB-SWM" customClass="FXBlurView">
-                                <rect key="frame" x="57" y="380" width="200" height="150"/>
+                                <rect key="frame" x="57" y="395" width="200" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="XHW-hb-PVd">
@@ -955,9 +955,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="GgH-46-fl0">
-                                <rect key="frame" x="115" y="533" width="84" height="30"/>
+                                <rect key="frame" x="117" y="546" width="84" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Menu">
+                                <state key="normal" backgroundImage="pullup_iPad.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -3011,6 +3011,7 @@
         <image name="map_pin_big.png" width="128" height="128"/>
         <image name="process.png" width="32" height="32"/>
         <image name="process_big.png" width="128" height="128"/>
+        <image name="pullup_iPad.png" width="166" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

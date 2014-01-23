@@ -43,6 +43,8 @@
 		EACE18AB188586D2006480A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EACE18AA188586D2006480A6 /* QuartzCore.framework */; };
 		EACE18B3188979C4006480A6 /* dashboardbg.png in Resources */ = {isa = PBXBuildFile; fileRef = EACE18B2188979C4006480A6 /* dashboardbg.png */; };
 		EAEB7DF318900D7A00D70D2C /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEB7DF218900D7A00D70D2C /* FXBlurView.m */; };
+		EAEB7DF618906FF200D70D2C /* pulldown_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = EAEB7DF418906FF200D70D2C /* pulldown_iPad.png */; };
+		EAEB7DF718906FF200D70D2C /* pullup_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = EAEB7DF518906FF200D70D2C /* pullup_iPad.png */; };
 		EE270DCD188EE9B10002B900 /* MSTBarCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCC188EE9B10002B900 /* MSTBarCodeView.m */; };
 		EE270DD0188EE9CE0002B900 /* MSTCredicardView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DCF188EE9CE0002B900 /* MSTCredicardView.m */; };
 		EE270DD3188EE9E20002B900 /* MSTmailView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE270DD2188EE9E20002B900 /* MSTmailView.m */; };
@@ -162,6 +164,8 @@
 		EACE18B2188979C4006480A6 /* dashboardbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboardbg.png; sourceTree = "<group>"; };
 		EAEB7DF118900D7A00D70D2C /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		EAEB7DF218900D7A00D70D2C /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		EAEB7DF418906FF200D70D2C /* pulldown_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pulldown_iPad.png; sourceTree = "<group>"; };
+		EAEB7DF518906FF200D70D2C /* pullup_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullup_iPad.png; sourceTree = "<group>"; };
 		EE270DCB188EE9B10002B900 /* MSTBarCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTBarCodeView.h; sourceTree = "<group>"; };
 		EE270DCC188EE9B10002B900 /* MSTBarCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTBarCodeView.m; sourceTree = "<group>"; };
 		EE270DCE188EE9CE0002B900 /* MSTCredicardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTCredicardView.h; sourceTree = "<group>"; };
@@ -412,6 +416,8 @@
 		EEC212A01888E59E005FE7B4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EAEB7DF418906FF200D70D2C /* pulldown_iPad.png */,
+				EAEB7DF518906FF200D70D2C /* pullup_iPad.png */,
 				EA38D73C1889CD830074E328 /* pullup.png */,
 				EA38D73A1889CD7B0074E328 /* dropdown.png */,
 				EACE18B2188979C4006480A6 /* dashboardbg.png */,
@@ -638,6 +644,7 @@
 				EEC212E51888E59E005FE7B4 /* icon-plus@2x.png in Resources */,
 				BEA203001877A71D0039B2F7 /* InfoPlist.strings in Resources */,
 				EEC213041888F01B005FE7B4 /* Menu1B_2.png in Resources */,
+				EAEB7DF618906FF200D70D2C /* pulldown_iPad.png in Resources */,
 				EEC212E61888E59E005FE7B4 /* icon-star.png in Resources */,
 				EEC212DA1888E59E005FE7B4 /* bg-addbutton@2x.png in Resources */,
 				EEC213001888EBF8005FE7B4 /* Menu1BG.png in Resources */,
@@ -648,6 +655,7 @@
 				EEC212E31888E59E005FE7B4 /* icon-plus-highlighted@2x.png in Resources */,
 				EEC212D91888E59E005FE7B4 /* bg-addbutton.png in Resources */,
 				BEA203091877A71D0039B2F7 /* Main.storyboard in Resources */,
+				EAEB7DF718906FF200D70D2C /* pullup_iPad.png in Resources */,
 				EEC212E91888E59E005FE7B4 /* mail@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

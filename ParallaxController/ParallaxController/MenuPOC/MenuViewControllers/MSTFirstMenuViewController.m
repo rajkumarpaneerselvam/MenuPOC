@@ -57,45 +57,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-
-    swipeUpView = [[UIView alloc] initWithFrame:CGRectMake(30, 520, 70, 50)];
-    [swipeUpView setBackgroundColor:[UIColor lightGrayColor]];
-
-    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipedown:)];
-    swipe.direction = UISwipeGestureRecognizerDirectionDown | UISwipeGestureRecognizerDirectionUp;
-    [swipeUpView addGestureRecognizer:swipe];
-
-//    UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeUp:)];
-//    swipe.direction = UISwipeGestureRecognizerDirectionUp;
-//    [swipeUpView addGestureRecognizer:swipeUp];
-
-    
-//    [self.view addSubview:swipeUpView];
-    
     
     [self beautifyComponents];
     [self rearrangeUIElements];
-}
-
-- (void) handleSwipeUp:(UISwipeGestureRecognizer *) sender {
-    NSLog(@"Swipe Up is called ========");
-
-}
-
-- (void) handleSwipedown:(UISwipeGestureRecognizer *) sender {
-  
-    if ( sender.direction | UISwipeGestureRecognizerDirectionDown )
-        NSLog(@" *** SWIPE DOWN ***");
-    if ( sender.direction | UISwipeGestureRecognizerDirectionUp )
-        NSLog(@" *** SWIPE UP ***");
     
-    NSLog(@"Swipe down is called ========");
 }
-
 
 - (IBAction)onClickBackbutton:(id)sender {
         [self dismissViewControllerAnimated:NO completion:nil];
-        
 }
 
 - (void)didReceiveMemoryWarning
@@ -115,6 +84,10 @@
                                      NSLog(@"I'm done!");
                                       [menuView setHidden:YES];
                                      ismenuOpen = NO;
+                                     [button setBackgroundImage:[UIImage imageNamed:@"pullup_ipad.png"] forState:UIControlStateNormal];
+//                                     [button setImageEdgeInsets:UIEdgeInsetsMake(0.0f,0.0f,0.0f,0.0f)];
+
+                                     
                                  }];
         
     }else{
@@ -125,6 +98,9 @@
                                        startEdge:BCRectEdgeTop
                                       completion:^{
                                           ismenuOpen = YES;
+                                          [button setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+                                          [button setBackgroundImage:[UIImage imageNamed:@"pulldown_iPad.png"] forState:UIControlStateNormal];
+//                                          [button setImageEdgeInsets:UIEdgeInsetsMake(0.0f,0.0f,18.0f,0.0f)];
                                       }];
     }
 }
@@ -132,7 +108,6 @@
 
 - (IBAction)onClickMenuFeatures:(id)sender {
 
-//    [self onClickMenuButton:nil];
     switch ([sender tag]) {
         case 1: {
             
@@ -140,39 +115,23 @@
                 barcodeView = [[MSTBarCodeView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
                 [self.view addSubview:barcodeView];
             }
-            
             [self animateViewLefttoRight:barcodeView];
-            
-            
-            
-//            MSTMyAccViewController *viewCtrl = (MSTMyAccViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTMyAccViewController"];
-//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 2: {
-
             if(!creditCardView){
                 creditCardView = [[MSTCredicardView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
                 [self.view addSubview:creditCardView];
             }
             [self animateViewRighttoLeft:creditCardView];
-            
-            
-//            MSTFirstMenuCreditCardViewController *viewCtrl = (MSTFirstMenuCreditCardViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuCreditCardViewController"];
-//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 3: {
-            
             if(!mailView){
                 mailView = [[MSTmailView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
                 [self.view addSubview:mailView];
             }
-            
             [self animateViewLefttoRight:mailView];
-            
-//            MSTFirstMenuMailViewController *viewCtrl = (MSTFirstMenuMailViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMailViewController"];
-//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 4: {
@@ -180,11 +139,7 @@
                 mapView = [[MSTMapView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
                 [self.view addSubview:mapView];
             }
-            
             [self animateViewRighttoLeft:mapView];
-
-//            MSTFirstMenuMapViewController *viewCtrl = (MSTFirstMenuMapViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuMapViewController"];
-//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
         case 5: {
@@ -193,15 +148,9 @@
                 settingsView = [[MSTSettingsView alloc] initWithFrame:CGRectMake(0, 50, self.view.frame.size.width, self.view.frame.size.height-100)];
                 [self.view addSubview:settingsView];
             }
-            
             [self animateViewBottomToTop:settingsView];
-
-
-//            MSTFirstMenuSettingsViewController *viewCtrl = (MSTFirstMenuSettingsViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"MSTFirstMenuSettingsViewController"];
-//            [self presentViewController:viewCtrl  animated:NO completion:nil];
             break;
         }
-            
         default:
             break;
     }
@@ -227,96 +176,96 @@
         [self.view addSubview:view];
 }
 
-- (void)loadDefaultView:(NSString *)title {
-
-    backButton = [[UIButton alloc] initWithFrame:CGRectMake(20,20,57,30)];
-    [backButton setTitle:@"< Back" forState:UIControlStateNormal];
-    [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [[backButton titleLabel] setFont:[UIFont systemFontOfSize:15.0f]];
-    [backButton addTarget:self action:@selector(onClickBackbutton:) forControlEvents:UIControlEventTouchUpInside];
-    [backButton setTitleColor:[UIColor colorWithRed:0.000000 green:0.478431 blue:1.000000 alpha:1.000000] forState:UIControlStateNormal];
-
-    [self.view addSubview:backButton];
-    
-    titleLbl = [[UILabel alloc] initWithFrame:CGRectMake(93,24,129,30)];
-    [titleLbl setText:title];
-    [self.view addSubview:titleLbl];
-
-    
-    button = [[UIButton alloc] initWithFrame:CGRectMake(129, 535, 56, 30)];
-    [button setTitle:@"Menu" forState:UIControlStateNormal];
-    [[button titleLabel] setFont:[UIFont systemFontOfSize:15.0f]];
-    [button setTitleColor:[UIColor colorWithRed:0.000000 green:0.478431 blue:1.000000 alpha:1.000000] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(onClickMenuButton:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
- 
-
-    menuView = [[FXBlurView alloc] initWithFrame:CGRectMake( 57,380,200,150)];
-    [menuView.layer setCornerRadius:8.0f];
-    
-
-    bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 150)];
-    [bgView setImage:[UIImage imageNamed:@"dashboardbg.png"]];
-    [menuView addSubview:bgView];
-    
-    
-    [menuView setHidden:YES];
-    
-    myAccButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(0,0,100,50)];
-    [myAccButton setTag:1];
-    [myAccButton.titleLabel setTextColor:[UIColor whiteColor]];
-    [myAccButton setImage:[UIImage imageNamed:@"barcode.png"] forState:UIControlStateNormal];
-    [myAccButton setTitle:@"Barcode Scan" forState:UIControlStateNormal];
-    [[myAccButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
-
-    [myAccButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
-    [menuView addSubview:myAccButton];
-
-    myProButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(100,0,100,50)];
-    [myProButton.titleLabel setTextColor:[UIColor whiteColor]];
-    [myProButton setTag:2];
-    [myProButton setImage:[UIImage imageNamed:@"credit_card.png"] forState:UIControlStateNormal];
-    [myProButton setTitle:@"Credit Card" forState:UIControlStateNormal];
-    [[myProButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
-
-    [myProButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
-    [menuView addSubview:myProButton];
-
-    transButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(0,50,100,50)];
-    [transButton.titleLabel setTextColor:[UIColor whiteColor]];
-    [transButton setTag:3];
-    [transButton setImage:[UIImage imageNamed:@"mail.png"] forState:UIControlStateNormal];
-    [transButton setTitle:@"Mail" forState:UIControlStateNormal];
-    [[transButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
-
-    [transButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
-    [menuView addSubview:transButton];
-
-    stmtButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(100,50,100,50)];
-    [stmtButton.titleLabel setTextColor:[UIColor whiteColor]];
-    [stmtButton setTag:4];
-    [stmtButton setImage:[UIImage imageNamed:@"map_pin.png"] forState:UIControlStateNormal];
-    [stmtButton setTitle:@"Navigation" forState:UIControlStateNormal];
-    [[stmtButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
-
-    [stmtButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
-    [menuView addSubview:stmtButton];
-    
-    
-    settingsButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(0,100,200,50)];
-    [settingsButton.titleLabel setTextColor:[UIColor whiteColor]];//[UIColor colorWithRed:0.000000 green:0.478431 blue:1.000000 alpha:1.000000]];
-    [settingsButton setTag:5];
-    [settingsButton setImage:[UIImage imageNamed:@"process.png"] forState:UIControlStateNormal];
-    [settingsButton setTitle:@"Settings" forState:UIControlStateNormal];
-    [[settingsButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
-    [settingsButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
-    [menuView addSubview:settingsButton];
-    
-    [self.view addSubview:menuView];
-    [menuView setHidden:YES];
-    
-    [self beautifyComponents];
-}
+//- (void)loadDefaultView:(NSString *)title {
+//
+//    backButton = [[UIButton alloc] initWithFrame:CGRectMake(20,20,57,30)];
+//    [backButton setTitle:@"< Back" forState:UIControlStateNormal];
+//    [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    [[backButton titleLabel] setFont:[UIFont systemFontOfSize:15.0f]];
+//    [backButton addTarget:self action:@selector(onClickBackbutton:) forControlEvents:UIControlEventTouchUpInside];
+//    [backButton setTitleColor:[UIColor colorWithRed:0.000000 green:0.478431 blue:1.000000 alpha:1.000000] forState:UIControlStateNormal];
+//
+//    [self.view addSubview:backButton];
+//    
+//    titleLbl = [[UILabel alloc] initWithFrame:CGRectMake(93,24,129,30)];
+//    [titleLbl setText:title];
+//    [self.view addSubview:titleLbl];
+//
+//    
+//    button = [[UIButton alloc] initWithFrame:CGRectMake(129, 535, 56, 30)];
+//    [button setTitle:@"Menu" forState:UIControlStateNormal];
+//    [[button titleLabel] setFont:[UIFont systemFontOfSize:15.0f]];
+//    [button setTitleColor:[UIColor colorWithRed:0.000000 green:0.478431 blue:1.000000 alpha:1.000000] forState:UIControlStateNormal];
+//    [button addTarget:self action:@selector(onClickMenuButton:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:button];
+// 
+//
+//    menuView = [[FXBlurView alloc] initWithFrame:CGRectMake( 57,380,200,150)];
+//    [menuView.layer setCornerRadius:8.0f];
+//    
+//
+////    bgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 150)];
+////    [bgView setImage:[UIImage imageNamed:@"dashboardbg.png"]];
+////    [menuView addSubview:bgView];
+//    
+//    
+//    [menuView setHidden:YES];
+//    
+//    myAccButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(0,0,100,50)];
+//    [myAccButton setTag:1];
+//    [myAccButton.titleLabel setTextColor:[UIColor whiteColor]];
+//    [myAccButton setImage:[UIImage imageNamed:@"barcode.png"] forState:UIControlStateNormal];
+//    [myAccButton setTitle:@"Barcode Scan" forState:UIControlStateNormal];
+//    [[myAccButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
+//
+//    [myAccButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
+//    [menuView addSubview:myAccButton];
+//
+//    myProButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(100,0,100,50)];
+//    [myProButton.titleLabel setTextColor:[UIColor whiteColor]];
+//    [myProButton setTag:2];
+//    [myProButton setImage:[UIImage imageNamed:@"credit_card.png"] forState:UIControlStateNormal];
+//    [myProButton setTitle:@"Credit Card" forState:UIControlStateNormal];
+//    [[myProButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
+//
+//    [myProButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
+//    [menuView addSubview:myProButton];
+//
+//    transButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(0,50,100,50)];
+//    [transButton.titleLabel setTextColor:[UIColor whiteColor]];
+//    [transButton setTag:3];
+//    [transButton setImage:[UIImage imageNamed:@"mail.png"] forState:UIControlStateNormal];
+//    [transButton setTitle:@"Mail" forState:UIControlStateNormal];
+//    [[transButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
+//
+//    [transButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
+//    [menuView addSubview:transButton];
+//
+//    stmtButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(100,50,100,50)];
+//    [stmtButton.titleLabel setTextColor:[UIColor whiteColor]];
+//    [stmtButton setTag:4];
+//    [stmtButton setImage:[UIImage imageNamed:@"map_pin.png"] forState:UIControlStateNormal];
+//    [stmtButton setTitle:@"Navigation" forState:UIControlStateNormal];
+//    [[stmtButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
+//
+//    [stmtButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
+//    [menuView addSubview:stmtButton];
+//    
+//    
+//    settingsButton = [[MSTCustomButton alloc] initWithFrame:CGRectMake(0,100,200,50)];
+//    [settingsButton.titleLabel setTextColor:[UIColor whiteColor]];//[UIColor colorWithRed:0.000000 green:0.478431 blue:1.000000 alpha:1.000000]];
+//    [settingsButton setTag:5];
+//    [settingsButton setImage:[UIImage imageNamed:@"process.png"] forState:UIControlStateNormal];
+//    [settingsButton setTitle:@"Settings" forState:UIControlStateNormal];
+//    [[settingsButton titleLabel] setFont:[UIFont systemFontOfSize:10.0f]];
+//    [settingsButton addTarget:self action:@selector(onClickMenuFeatures:) forControlEvents:UIControlEventTouchUpInside];
+//    [menuView addSubview:settingsButton];
+//    
+//    [self.view addSubview:menuView];
+//    [menuView setHidden:YES];
+//    
+//    [self beautifyComponents];
+//}
 
 
 
@@ -394,8 +343,8 @@
     
     if ([[UIScreen mainScreen] bounds].size.height == 480) {
      
-        menuView.frame = CGRectMake(57,290,200,150);
-        button.frame = CGRectMake(129, 440, 56, 30);
+        menuView.frame = CGRectMake(57,310,200,150);
+        button.frame = CGRectMake(129, 460, 56, 22);
         
     }
 }
