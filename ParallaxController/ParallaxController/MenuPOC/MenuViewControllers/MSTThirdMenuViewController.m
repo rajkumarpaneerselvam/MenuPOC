@@ -7,7 +7,6 @@
 //
 
 #import "MSTThirdMenuViewController.h"
-#import "MSTBarCodeViewController.h"
 #import "MSTBarCodeView.h"
 #import "MSTCredicardView.h"
 #import "MSTmailView.h"

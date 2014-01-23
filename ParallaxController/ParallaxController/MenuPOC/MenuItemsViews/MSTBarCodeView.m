@@ -48,8 +48,43 @@
 - (void)UpdateWithImage:(UIImage *)img colorCode:(UIColor *)color titleText:(NSString *)tittle {
     [menuIndicatorImageView setImage:img];
     [contentTableView setBackgroundColor:color];
-    
+
+    NSArray *subviews = [self subviews];
+    for (id views in subviews) {
+        [views removeFromSuperview];
+    }
+    if ([tittle isEqualToString:@"Locations"]) {
+        [self loadMapView];
+    } else if ([tittle isEqualToString:@"CreditCard"]) {
+        [self loadCreaditCardView];
+    } else {
+        [self addSubview:menuIndicatorImageView];
+        [self addSubview:contentTableView];
+    }
 }
 
+
+- (void)loadMapView{
+   [self setBackgroundColor:[UIColor lightGrayColor]];
+             
+    MKMapView *mapView = [[MKMapView alloc] initWithFrame:CGRectMake(0, 100, self.frame.size.width, self.frame.size.height-100)];
+    [self addSubview:mapView];
+             
+    CLLocationCoordinate2D coord = {.latitude =  40.1480005316257, .longitude =  -82.9909833087205};
+    MKCoordinateSpan span = {.latitudeDelta =  0.2, .longitudeDelta =  0.2};
+    MKCoordinateRegion region = {coord, span};
+    [mapView setRegion:region];
+             
+}
+- (void)loadCreaditCardView{
+    
+    [self setBackgroundColor:[UIColor lightGrayColor]];
+    
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 50, self.frame.size.width, self.frame.size.height-50)];
+    [self addSubview:webView];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://mobilebanking.chase.com/"]]];
+    [webView setUserInteractionEnabled:NO];
+    
+}
 
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MapKit/MapKit.h"
+#import <MessageUI/MessageUI.h>
 
-@interface MSTBarCodeView : UIView{
+@interface MSTBarCodeView : UIView <MFMailComposeViewControllerDelegate> {
     UIImageView *menuIndicatorImageView;
     UITableView *contentTableView;
 }
